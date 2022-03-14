@@ -7,11 +7,14 @@ const createError = require('http-errors')
 
 
 require('./config/db.config');
+const {session, loadUser} =  require('./config/session.config')
 
 const app = express();
 
 app.use(express.json());
 app.use(logger('dev'));
+app.use(session);
+app.use(loadUser);
 
 
 const routes = require('./config/routes.config');
