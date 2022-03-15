@@ -7,14 +7,19 @@ const createError = require('http-errors')
 
 
 require('./config/db.config');
-const {session, loadUser} =  require('./config/session.config')
+
 
 const app = express();
 
+/**Middlewares */
+/** para que sepa leer el body las peticiones post que vienen en forma de JSON*/
 app.use(express.json());
+/** para que cada vez que llegue una peticion http se responda con el estado correspondiente*/
 app.use(logger('dev'));
+/** para que sepa leer la cookie de sesion en la peticion */
+const { session } = require('./config/session.config')
 app.use(session);
-app.use(loadUser);
+
 
 
 const routes = require('./config/routes.config');

@@ -10,7 +10,6 @@ const userSchema = new Schema ({
     name:{
         type: String,
         required: 'User name is required',
-        minlength: [3,'User needs at least 3 chars']
     },
 
     email:{

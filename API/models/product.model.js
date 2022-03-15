@@ -14,6 +14,7 @@ const productSchema = new Schema({
     },
 
     image: {
+        //poner un array de imagenes
         type: String,
         default:"",
     },
@@ -25,6 +26,10 @@ const productSchema = new Schema({
 
     category:{
         //
+    },
+
+    keyWords:{
+        //para añadir palabras claves de busqueda
     }
 }, { timestamps:true ,
     toJSON: {
