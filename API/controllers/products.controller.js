@@ -2,7 +2,7 @@ const Product = require('../models/product.model')
 const createError = require('http-errors')
 
 module.exports.list = (req, res, next) => {
-    Product.find()
+    Product.find({name: 'carlos'})
         .then((products) => { res.json(products) })
         .catch(error => next(error))
 }

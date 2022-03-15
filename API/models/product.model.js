@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 
 const productSchema = new Schema({
-   productName: {
+   name: {
         type: String,
         required: 'Product is required'
     },
@@ -25,12 +25,13 @@ const productSchema = new Schema({
     },
 
     category:{
-        //
+        type: String
     },
-
+        
     keyWords:{
-        //para añadir palabras claves de busqueda
-    }
+       type:String,
+       default: []
+    },
 }, { timestamps:true ,
     toJSON: {
         transform: (doc, product) => {

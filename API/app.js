@@ -17,8 +17,9 @@ app.use(express.json());
 /** para que cada vez que llegue una peticion http se responda con el estado correspondiente*/
 app.use(logger('dev'));
 /** para que sepa leer la cookie de sesion en la peticion */
-const { session } = require('./config/session.config')
+const { session, loadUser } = require('./config/session.config')
 app.use(session);
+app.unsubscribe(loadUser)
 
 
 

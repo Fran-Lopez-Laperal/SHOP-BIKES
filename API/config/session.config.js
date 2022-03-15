@@ -1,6 +1,7 @@
 const expressSession = require("express-session");
 const MongoStore = require("connect-mongo");
 const {connectionUrl} = require('../config/db.config')
+const User = require('../models/user.model')
 
 
 
@@ -19,8 +20,10 @@ const session = expressSession({
     })
 })
 
-
 module.exports.session = session
+
+
+
 module.exports.loadUser = (req, res, next) => {
     const { userId } = req.session;
 
@@ -37,3 +40,5 @@ module.exports.loadUser = (req, res, next) => {
     }
 
 }
+
+
