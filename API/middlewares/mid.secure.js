@@ -1,7 +1,7 @@
 const { create } = require('connect-mongo')
 const createError = require('http-errors')
 
-modules.exports.isAuthenticated = (req, res, next) => {
+module.exports.isAuthenticated = (req, res, next) => {
     if (req.user) {
         next();
     } else {
@@ -10,7 +10,7 @@ modules.exports.isAuthenticated = (req, res, next) => {
 }
 
 
-modules.exports.isAdmin = (req, res, next) => {
+module.exports.isAdmin = (req, res, next) => {
     if (req.user.isAdmin()) {
         next()
     } else {

@@ -28,9 +28,6 @@ const userSchema = new Schema({
         match: [PASSWORD_PATTERN, 'Password needs at least 8 chars']
     },
 
-    
-
-
 }, {
     timestamps: true,
     toJSON: {

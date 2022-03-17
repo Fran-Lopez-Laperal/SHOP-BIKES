@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 
 const productSchema = new Schema({
-   name: {
+    name: {
         type: String,
         required: 'Product is required'
     },
@@ -16,23 +16,24 @@ const productSchema = new Schema({
     image: {
         //poner un array de imagenes
         type: String,
-        default:"",
+        default: "",
     },
 
     price: {
         type: Number,
-        required:'Price product is required'
+        required: 'Price product is required'
     },
 
-    category:{
+    category: {
         type: String
     },
-        
-    keyWords:{
-       type:String,
-       default: []
+
+    keyWords: {
+        type: [String],
+        default: []
     },
-}, { timestamps:true ,
+}, {
+    timestamps: true,
     toJSON: {
         transform: (doc, product) => {
             product.id = doc._id;
@@ -44,4 +45,4 @@ const productSchema = new Schema({
 })
 
 const Product = mongoose.model('Product', productSchema);
-module.exports =Product;
+module.exports = Product;
