@@ -10,8 +10,8 @@ module.exports.upsert = (req, res, next) => {
 }
 
 module.exports.detail = (req, res, next) => {
-    shoppingCart.findOne(req.params.id)
-    .populate("owner")
+    shoppingCart.findOne({owner:req.user.id})
+        .populate("owner")
         .then(cart => res.json(cart))
         .catch(error => next(error))
 }
