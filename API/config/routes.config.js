@@ -6,19 +6,19 @@ const auth = require('../controllers/auth.controller')
 const cart = require("../controllers/shoppingCart.controller")
 const secure = require('../middlewares/mid.secure')
 
-router.get("/products",  products.list);
-router.post("/products", products.create);
+router.get("/products", products.list);
+router.post("/products", secure.isAuthenticated, secure.isAdmin, products.create);
 router.get("/products/:id", products.detail);
-router.delete("/products/:id", products.delete);
-router.patch("/products/:id,", products.edit);
+router.delete("/products/:id", secure.isAuthenticated, secure.isAdmin, products.delete);
+router.patch("/products/:id", secure.isAuthenticated, secure.isAdmin, products.edit);
 
 router.post("/register", auth.register);
 router.post("/login", auth.login);
-router.post("/logout", auth.logout)
-router.get("/profile",secure.isAuthenticated, auth.profile)
+router.post("/logout", secure.isAuthenticated, auth.logout)
+router.get("/profile", secure.isAuthenticated, auth.profile)
 
-router.put("/shopping-cart", cart.upsert)
-router.get("/shopping-cart/:id", cart.detail )
+router.put("/shopping-cart", secure.isAuthenticated, cart.upsert)
+router.get("/shopping-cart/:id", secure.isAuthenticated, cart.detail)
 
 router.use((req, res, next) => next(createError(404, 'Route not found')));
 

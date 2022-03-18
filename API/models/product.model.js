@@ -5,9 +5,8 @@ const Schema = mongoose.Schema;
 const productSchema = new Schema({
     name: {
         type: String,
-        required: 'Product is required'
+        required: 'Product is required',
     },
-
     description: {
         type: String,
         required: 'Description is required'
@@ -25,11 +24,13 @@ const productSchema = new Schema({
     },
 
     category: {
-        type: String
+        type: String,
+        required: 'Categroy product is required'
     },
 
     keyWords: {
         type: [String],
+        required: 'keyWords product is required',
         default: []
     },
 }, {

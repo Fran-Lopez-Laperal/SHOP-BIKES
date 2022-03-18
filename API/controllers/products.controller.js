@@ -32,7 +32,6 @@ module.exports.create = (req, res, next) => {
 
 module.exports.detail = (req, res, next) => {
     Product.findById(req.params.id)
-        .populate("owner")
         .then((product) => {
             if (!product) {
                 createError(404, `Product ${req.params.id} not found`)

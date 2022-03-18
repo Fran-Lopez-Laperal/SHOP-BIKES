@@ -1,7 +1,6 @@
 const ShoppingCart = require("../models/shoppingCart.model")
-
 const createError = require("http-errors");
-const shoppingCart = require("../models/shoppingCart.model");
+
 
 module.exports.upsert = (req, res, next) => {
     ShoppingCart.findOneAndUpdate({ owner: req.user.id }, req.body, { new: true, runValidators: true, upsert: true })
@@ -10,9 +9,11 @@ module.exports.upsert = (req, res, next) => {
 }
 
 module.exports.detail = (req, res, next) => {
-    shoppingCart.findOne({owner:req.user.id})
+   const shoppingCart = req.body;
+    req.owner = req.user.id;
+    ShoppingCart.findOne({shoppingCart})
         .populate("owner")
-        .then(cart => res.json(cart))
+        .then( cart => res.json(cart))
         .catch(error => next(error))
 }
 

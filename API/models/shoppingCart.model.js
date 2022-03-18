@@ -22,7 +22,13 @@ const shoppingCartSchema = new Schema({
         type: mongoose.Types.ObjectId,
         ref: 'User'
     }
-}, { timestamps: true })
+}, { timestamps: true,
+    toJSON: {
+        transform : (doc, cart) => {
+            cart.id = doc.id
+        }
+    }
+})
 
 const shoppingCart = mongoose.model('shoppingCart', shoppingCartSchema);
 module.exports = shoppingCart
