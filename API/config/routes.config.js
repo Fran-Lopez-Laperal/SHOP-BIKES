@@ -18,7 +18,7 @@ router.post("/logout", auth.logout)
 router.get("/profile",secure.isAuthenticated, auth.profile)
 
 router.put("/shopping-cart", cart.upsert)
-//router.get("/shopping-cart", cart.detail )
+router.get("/shopping-cart", cart.detail )
 
 router.use((req, res, next) => next(createError(404, 'Route not found')));
 
