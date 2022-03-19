@@ -4,6 +4,7 @@ const router = express.Router();
 const products = require('../controllers/products.controller');
 const auth = require('../controllers/auth.controller')
 const cart = require("../controllers/shoppingCart.controller")
+const order = require('../controllers/orders.controller')
 const secure = require('../middlewares/mid.secure')
 
 router.get("/products", products.list);
@@ -21,8 +22,7 @@ router.put("/shopping-cart", secure.isAuthenticated, cart.upsert)
 router.get("/shopping-cart", secure.isAuthenticated, cart.detail)
 router.post("/shopping-cart/order", secure.isAuthenticated, cart.order)
 
-router.get("/orders", secure.isAuthenticated, cart.ordersList)
-
+router.get("/orders", secure.isAuthenticated, order.ordersList)
 
 router.use((req, res, next) => next(createError(404, 'Route not found')));
 

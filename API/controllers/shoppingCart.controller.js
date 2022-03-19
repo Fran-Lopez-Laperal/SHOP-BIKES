@@ -40,19 +40,16 @@ module.exports.order = (req, res, next) => {
                         }
                     }),
                     owner: req.user.id,
-                    state :'in process'
+                    state: 'in process'
                 }
                 return Order.create(order)
-                    .then(cart => res.status(201).json(cart))
+                    .then(order => {
+                        return ShoppingCart.deleteOne({ owner: req.user.id })
+                            .then(() => res.status(201).json(order))
+                    })
             }
         })
         .catch(error => next(error))
-}
-
-module.exports.ordersList = (req, res, next) => {
-    Order.find()
-    .then(order => res.json(order))
-    .catch(error => next (error))
 }
 
 
