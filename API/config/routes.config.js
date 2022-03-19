@@ -18,7 +18,11 @@ router.post("/logout", secure.isAuthenticated, auth.logout)
 router.get("/profile", secure.isAuthenticated, auth.profile)
 
 router.put("/shopping-cart", secure.isAuthenticated, cart.upsert)
-router.get("/shopping-cart/:id", secure.isAuthenticated, cart.detail)
+router.get("/shopping-cart", secure.isAuthenticated, cart.detail)
+router.post("/shopping-cart/order", secure.isAuthenticated, cart.order)
+
+router.get("/orders", secure.isAuthenticated, cart.ordersList)
+
 
 router.use((req, res, next) => next(createError(404, 'Route not found')));
 

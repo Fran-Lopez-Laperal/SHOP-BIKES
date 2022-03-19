@@ -34,7 +34,7 @@ module.exports.detail = (req, res, next) => {
     Product.findById(req.params.id)
         .then((product) => {
             if (!product) {
-                createError(404, `Product ${req.params.id} not found`)
+                next(createError(404, `Product ${req.params.id} not found`))
             } else {
                 res.json(product)
             }
@@ -46,7 +46,7 @@ module.exports.delete = (req, res, next) => {
     Product.findByIdAndDelete(req.params.id)
         .then(product => {
             if (!product) {
-                createError(404, `Product ${req.params.id} not found`)
+                next(createError(404, `Product ${req.params.id} not found`))
             } else {
                 res.status(204).send();
             }

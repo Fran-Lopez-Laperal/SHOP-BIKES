@@ -22,13 +22,29 @@ const shoppingCartSchema = new Schema({
         type: mongoose.Types.ObjectId,
         ref: 'User'
     }
-}, { timestamps: true,
+}, {
+    timestamps: true,
     toJSON: {
-        transform : (doc, cart) => {
-            cart.id = doc.id
+        virtuals: true,
+        transform: (doc, cart) => {
+            cart.id = doc._id
+            return cart
         }
     }
 })
+
+shoppingCartSchema.virtual('total').get(function () {
+    return this.products.reduce((total, cartItem) => {
+        return total + (cartItem.amount * cartItem.product.price)
+    }, 0)
+})
+
+shoppingCartSchema.pre('findOne', function (next) {
+    this.populate('products.product', 'name price')
+    next()
+})
+
+
 
 const shoppingCart = mongoose.model('shoppingCart', shoppingCartSchema);
 module.exports = shoppingCart
