@@ -22,7 +22,10 @@ function ProductList() {
 
     return (
         <div>
-            {JSON.stringify(products)}
+            {products.map(product => (
+                <img src={product.image} alt={product.name} />
+            )
+            )}
         </div>
     )
 }

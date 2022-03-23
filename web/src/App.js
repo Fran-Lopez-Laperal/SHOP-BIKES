@@ -13,12 +13,11 @@ function App() {
         <Routes>
           <Route path='/' element={<ProductCategories />} />
           <Route path='/products' element={<ProductList />} />
-        
         </Routes>
       </div>
       <Footer />
     </div>
   );
-}
+}   
 
 export default App;

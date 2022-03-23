@@ -15,14 +15,14 @@ function ProductCategories() {
             <div className='category-group'>
                 <div className='bike-category mb-5'>
                     <img src={bikeImage} alt={bikeImage} />
-                    <Link to="/products?category=bikes">
+                    <Link to="/products?category=bike">
                         <p>BICICLETAS</p>
                     </Link>
                 </div>
                 <div className='accesory-category'>
                     <img src={accesoryImage} alt={accesoryImage} />
-                    <Link to={""}>
-                        <p><i className='fa fa-home'></i>ELECTRONICA</p>
+                    <Link to="/products?category=accesory">
+                        <p>COMPONENTES</p>
                     </Link>
 
                 </div>
@@ -30,14 +30,14 @@ function ProductCategories() {
             <div className='category-group'>
                 <div className='electronic-category mb-5'>
                     <img src={electronicImage} alt={electronicImage} />
-                    <Link to={""}>
-                        <p>COMPONENTES</p>
+                    <Link to="/products?category=elctronic">
+                        <p>ELECTRONICA</p>
                     </Link>
 
                 </div>
                 <div className='clothes-category'>
                     <img src={clothesImage} alt={clothesImage} />
-                    <Link to={""}>
+                    <Link to="/products?category=clothes">
                         <p>ROPA</p>
                     </Link>
 
