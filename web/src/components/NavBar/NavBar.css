@@ -1,3 +1,18 @@
 .link-nav{
     text-decoration: none;
 }
+
+.navbar{
+  background-color: #5a5c60;
+  height: 80px;
+  font-size: 30px;
+}
+
+.entry-search{
+ margin-left: 245px;
+}
+.entry-search-form{
+    height: 30px;
+    width: 200px;
+  
+}

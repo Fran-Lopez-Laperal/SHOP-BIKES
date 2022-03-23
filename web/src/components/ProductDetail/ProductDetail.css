@@ -1,14 +1,26 @@
-.cart{
-    margin-left: 180px;
-    align-self: end;
-}
-
+.product-detail {
+    background: none #fff;
+    box-shadow: 1px 5px 7px 0px #ccc;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+} 
 
 .btn{
-    width: 300px;
-    height: 30px;
+    margin-left: 135px;
+    background-color: rgb(230, 135, 11);
+}
+.product-image{
+    margin-top: 70px;
+    padding: 10px;
 }
 
-.product-image{
-    height: 100%;
+.product-price{
+    margin-left:200px;
+    font-weight: 600;
+}
+
+.card{
+    margin-top:-16px;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
 }

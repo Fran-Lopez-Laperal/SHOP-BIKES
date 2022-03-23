@@ -1,0 +1,22 @@
+.home img{
+    height: 250px;
+    width: 210px;
+    object-fit: cover;
+}
+
+.home p {
+    z-index: 1px;
+    margin-top: -28px;
+    text-align: center;
+    color: white;
+}
+
+.home  a {
+    text-decoration: none;
+}
+
+.category-group{
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 70px;
+}

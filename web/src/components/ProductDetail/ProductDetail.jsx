@@ -1,7 +1,7 @@
 import './ProductDetail.css'
 import React from "react";
 import { useParams } from "react-router";
-import { getDetailProduct } from "../API-services/API-services";
+import { getDetailProduct } from "../../services/api";
 
 function ProductDetail() {
 
@@ -12,7 +12,7 @@ function ProductDetail() {
         getDetailProduct(id).then((response) => {
             setProduct(response.data)
         })
-    }, [])
+    }, [id])
 
     if (!product) {
         return null;
@@ -20,30 +20,29 @@ function ProductDetail() {
 
 
     return (
-        <div className="d-flex ">
-            <div className="col-md-4 mt-5 product-image">
-                <img src={product.image} className="img-fluid rounded-start" alt={product.name} />
-            </div>
-
-            <div className="cart">
-                <div>
-                    <h3>{product.name}</h3>
-                    <small>{product.description}</small>
-                    <h5>{product.price}</h5>
+        <>
+            <hr />
+            <div className="card mb-5" style={{ maxWidth: '840px' }}>
+                <div className="row g-0">
+                    <div className="product-image col-md-6">
+                        <img src={product.image} className="img-fluid rounded-start" alt={product.id} />
+                    </div>
+                    <div className="product-detail col-md-6">
+                        <div className="card-body">
+                            <h5 className="card-title">{product.name}</h5>
+                            <hr/>
+                            <p className='product-price card-text' style={{ color: 'red' }}>{product.price}€</p>
+                            <p className="card-text">{product.description}</p>
+                            <p className="card-text"><strong>Category: </strong><small className="text-muted">{product.category}</small></p>
+                            <button className='btn'>Add to Cart</button>
+                        </div>
+                    </div>
                 </div>
-
-                <button className='btn btn-danger'>Add to cart</button>
             </div>
-        </div>
+        </>
+
     )
 }
 
 export default ProductDetail
-
-
-
-
-
-
-
 

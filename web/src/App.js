@@ -1,18 +1,22 @@
 import { Route, Routes } from "react-router";
-import Home from "./components/Home/home";
+import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
-import ProductDetail from "./components/ProductDetail/ProductDetail";
+import ProductCategories from "./components/ProductCategories/ProductCategories";
+import ProductList from "./components/ProductList/ProductList";
 
 
 function App() {
   return (
-    <div className="container">
+    <div className="app">
       <NavBar />
-      <Routes>
-        <Route path='/products' element={<Home/>} />
-        <Route path='/products/:id' element={<ProductDetail/>}  />
-      </Routes>
-
+      <div className="container">
+        <Routes>
+          <Route path='/' element={<ProductCategories />} />
+          <Route path='/products' element={<ProductList />} />
+        
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 }
