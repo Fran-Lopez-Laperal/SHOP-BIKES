@@ -22,9 +22,9 @@ http.interceptors.response.use(
 
 
 
-export function getProducts(category) {
+export function getProducts(category, name) {
     
-    return http.get("api/products/", { params: { category } })
+    return http.get("api/products/", { params: { category, name } })
 }
 
 export function getDetailProduct(id) {

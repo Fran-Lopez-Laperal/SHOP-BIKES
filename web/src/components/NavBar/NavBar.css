@@ -1,0 +1,19 @@
+.logo-head {
+    border: solid 2px black;
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top: -5px;
+
+}
+
+.logo-letters {
+    margin-top: 1px;
+    margin-left: -4px;
+}
+
+.logo-name {
+    margin-top: -35px;
+    margin-left: 58px;
+}
