@@ -1,7 +1,7 @@
 import './PorductList.css'
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
-import { getProducts } from "../../services/api";
+import { getProducts } from "../../services/api-service";
 import { Link } from 'react-router-dom';
 
 function ProductList() {

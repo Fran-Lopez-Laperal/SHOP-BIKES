@@ -1,10 +1,13 @@
 
 import './NavBar.css'
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import React from 'react';
+import { AuthContext } from '../../contexts/AuthContext';
 
 
 
 function NavBar() {
+  const { user} = React.useContext(AuthContext)
 
   const navigate = useNavigate()
 
@@ -36,6 +39,13 @@ function NavBar() {
           <input name='search' className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
           <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
+        {user && (
+          <Link className='user-name' to='/profile'>
+            {user.name}
+          </Link>
+        )
+        }
+
       </div>
     </nav>
   )

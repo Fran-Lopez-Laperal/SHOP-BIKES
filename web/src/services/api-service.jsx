@@ -7,7 +7,7 @@ const http = axios.create({
 
 http.interceptors.response.use(
   (response) => {
-    return response.data;
+    return response;
   },
   (error) => {
     if (error.response?.status === 401) {
@@ -24,10 +24,18 @@ http.interceptors.response.use(
 
 export function getProducts(category, name) {
     
-    return http.get("api/products/", { params: { category, name } })
+    return http.get('api/products/', { params: { category, name } })
 }
 
 export function getDetailProduct(id) {
   return http.get(`api/products/${id}`)
 }
 
+
+export function login (user) {
+  return http.post('api/login', user)
+}
+
+export function register (user) {
+  return http.post('api/register', user)
+}
