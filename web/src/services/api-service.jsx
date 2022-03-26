@@ -7,7 +7,7 @@ const http = axios.create({
 
 http.interceptors.response.use(
   (response) => {
-    return response;
+    return response.data;
   },
   (error) => {
     if (error.response?.status === 401) {
@@ -23,8 +23,8 @@ http.interceptors.response.use(
 
 
 export function getProducts(category, name) {
-    
-    return http.get('api/products/', { params: { category, name } })
+
+  return http.get('api/products/', { params: { category, name } })
 }
 
 export function getDetailProduct(id) {
@@ -32,10 +32,57 @@ export function getDetailProduct(id) {
 }
 
 
-export function login (user) {
+export function login(user) {
   return http.post('api/login', user)
 }
 
-export function register (user) {
+export function register(user) {
   return http.post('api/register', user)
+}
+
+export function getCart() {
+
+  return http.get('api/shopping-cart')
+    .catch(error => {
+      if (error.response.status === 404) {
+        return undefined
+      } else {
+        throw error
+      }
+    })
+}
+
+export function addProductToCart(productId) {
+  return getCart()
+    .then(cart => {
+      if (!cart) {
+        cart = {
+          products: [{
+            product: productId,
+            amount: 1
+          }]
+        }
+        return upsertCart(cart)
+      } else {
+        cart = {
+          products: [
+            {
+              product: productId,
+              amount: 1
+            },
+            ...cart.products.map((cartItem) => {
+              return {
+                amount: cartItem.amount,
+                product: cartItem.product.id
+              }
+            })
+          ]
+        }
+        return upsertCart(cart)
+      }
+    })
+}
+
+export function upsertCart(cart) {
+  return http.put('api/shopping-cart', cart)
 }

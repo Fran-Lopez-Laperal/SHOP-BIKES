@@ -1,7 +1,7 @@
 import './ProductDetail.css'
 import React from "react";
 import { useParams } from "react-router";
-import { getDetailProduct } from "../../services/api";
+import { getDetailProduct } from "../../services/api-service";
 
 function ProductDetail() {
 
@@ -9,13 +9,16 @@ function ProductDetail() {
     const { id } = useParams()
 
     React.useEffect(() => {
-        getDetailProduct(id).then((response) => {
-            setProduct(response.data)
+        getDetailProduct(id).then((product) => {
+            setProduct(product)
         })
     }, [id])
 
     if (!product) {
         return null;
+    }
+    function handleAdd() {
+        
     }
 
 
@@ -30,15 +33,16 @@ function ProductDetail() {
                     <div className="product-detail col-md-6">
                         <div className="card-body">
                             <h5 className="card-title">{product.name}</h5>
-                            <hr/>
+                            <hr />
                             <p className='product-price card-text' style={{ color: 'red' }}>{product.price}€</p>
                             <p className="card-text">{product.description}</p>
                             <p className="card-text"><strong>Category: </strong><small className="text-muted">{product.category}</small></p>
-                            <button className='btn'>Add to Cart</button>
+                            <button className='btn' onClick={handleAdd}>Add to Cart</button>
                         </div>
                     </div>
                 </div>
             </div>
+        
         </>
 
     )

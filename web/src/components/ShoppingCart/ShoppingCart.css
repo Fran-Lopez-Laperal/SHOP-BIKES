@@ -1,0 +1,27 @@
+
+.moment{
+    color: #77d146;
+}
+
+
+
+.cart-price{
+    font-weight: 700;
+}
+
+.shopping-cart .cart-image{
+    width: 100%;
+    max-width: 200px;
+}
+
+
+.shopping-cart .bg-light{
+    height: 60px;
+}
+
+.shopping-cart .bg-light > small {
+    color: grey;
+
+}
+
+

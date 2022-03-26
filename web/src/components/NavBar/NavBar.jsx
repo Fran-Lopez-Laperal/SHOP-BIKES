@@ -7,7 +7,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 
 
 function NavBar() {
-  const { user} = React.useContext(AuthContext)
+  const { user } = React.useContext(AuthContext)
 
   const navigate = useNavigate()
 
@@ -30,21 +30,30 @@ function NavBar() {
             </div>
           </div>
           <div className='logo-name'>
-            <span className='ms-3' style={{ color: 'red' }}>BIKE</span>
-            -
-            <span style={{ color: 'black' }}>LOCKER</span></div>
+            <Link to='/products'>
+              <span className='ms-3' style={{ color: 'red' }}>BIKE</span>
+              -
+              <span style={{ color: 'black' }}>LOCKER</span>
+            </Link>
+          </div>
         </div>
 
         <form onSubmit={handleSearch} className="d-flex">
           <input name='search' className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
           <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
-        {user && (
-          <Link className='user-name' to='/profile'>
-            {user.name}
+        <div className='d-flex div-cart'>
+          <h4>
+            {user && (
+              <Link className='user-name' to='/profile'>
+                {user.name}
+              </Link>
+            )}
+          </h4>
+          <Link to='/shoppingCart'>
+            <i className='fa fa-shopping-cart logo-cart'></i>
           </Link>
-        )
-        }
+        </div>
 
       </div>
     </nav>

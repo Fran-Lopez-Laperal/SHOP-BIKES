@@ -17,6 +17,7 @@ function ProductList() {
 
         getProducts(category, name)
             .then((products) => {
+                console.log('api',products)
                 setProducts(products)
             })
     }, [search])
@@ -32,7 +33,7 @@ function ProductList() {
             {products.map(product => (
 
                 <div className="card mt-5 me-4 mb-5" style={{ width: '16rem' }} key={products.id}>
-                    <Link to='/'>
+                    <Link to={`/products/${product.id}`}>
                         <img src={product.image} className="card-img-top mt-2 p-3" alt={product.name} />
                     </Link>
                     <hr/>

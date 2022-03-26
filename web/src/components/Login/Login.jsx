@@ -28,8 +28,8 @@ function Login() {
         e.preventDefault(e);
 
         login(data)
-            .then((response) => {
-                handleLogin(response.data)
+            .then((user) => {
+                handleLogin(user)
                 navigate('/')
             })
             .catch((err) => {
