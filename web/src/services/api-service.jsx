@@ -9,14 +9,15 @@ http.interceptors.response.use(
   (response) => {
     return response.data;
   },
-  (error) => {
-    if (error.response?.status === 401) {
-      localStorage.clear();
-      window.location.replace("/login");
-    }
+  // (error) => {
+  //   console.error(error)
+  //   if (error.response?.status === 401) {
+  //     localStorage.clear();
+  //     window.location.replace("/login");
+  //   }
 
-    return Promise.reject(error);
-  }
+  //   return Promise.reject(error);
+  // }
 );
 
 
@@ -55,6 +56,7 @@ export function getCart() {
 export function addProductToCart(productId) {
   return getCart()
     .then(cart => {
+      console.log(cart)
       if (!cart) {
         cart = {
           products: [{
@@ -84,5 +86,9 @@ export function addProductToCart(productId) {
 }
 
 export function upsertCart(cart) {
-  return http.put('api/shopping-cart', cart)
+  console.log(cart)
+  return http.put('/api/shopping-cart', cart)
+  .catch(error => {
+    console.log('hola', error)
+  })
 }

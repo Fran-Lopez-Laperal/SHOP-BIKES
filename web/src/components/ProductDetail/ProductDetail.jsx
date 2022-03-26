@@ -1,12 +1,13 @@
 import './ProductDetail.css'
 import React from "react";
-import { useParams } from "react-router";
-import { getDetailProduct } from "../../services/api-service";
+import { useNavigate, useParams } from "react-router";
+import { addProductToCart, getDetailProduct } from "../../services/api-service";
 
 function ProductDetail() {
-
+    
     const [product, setProduct] = React.useState(null)
     const { id } = useParams()
+    const navigate = useNavigate()
 
     React.useEffect(() => {
         getDetailProduct(id).then((product) => {
@@ -17,8 +18,10 @@ function ProductDetail() {
     if (!product) {
         return null;
     }
-    function handleAdd() {
-        
+   const  handleAdd = () => {
+        addProductToCart(id).then((productAdded) => {
+            navigate('/products')
+        })
     }
 
 
