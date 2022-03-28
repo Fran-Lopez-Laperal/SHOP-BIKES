@@ -1,0 +1,16 @@
+.home-carousel img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+}
+
+.home-carousel a {
+    position: relative;
+    right: 270px;
+    float: inherit;
+    background-color: red;
+    border: solid 1px;
+    z-index:inherit;
+    margin-top: -50px;
+    color: white;
+}

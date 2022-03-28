@@ -1,22 +1,25 @@
-.home img{
+.product-category{
+    
+}
+
+
+.product-category img {
     height: 250px;
     width: 210px;
     object-fit: cover;
 }
 
-.home p {
-    z-index: 1px;
+.product-category p {
     margin-top: -28px;
     text-align: center;
     color: white;
 }
 
-.home  a {
+.product-category a {
     text-decoration: none;
 }
 
-.category-group{
-    margin-top: 80px;
-    margin-bottom: 80px;
+.category-group {
     margin-left: 70px;
+    align-items: center;
 }

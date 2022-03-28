@@ -1,5 +1,28 @@
 .secondary-bar{
   width: auto;
   height: 50px;
-  background:-webkit-radial-gradient(center center, circle, black, #1162ac)
+  background:-webkit-radial-gradient(center center, circle, black, #1162ac);
+  justify-items: center;
+}
+
+.secondary-bar .form-control{
+    background-color: transparent;
+    border: solid 1px;
+    width: 250px;
+    height: 25px;
+    text-decoration:underline;
+    color: rgb(202, 201, 201);
+    border-left: none;
+    border-right: none;
+    border-top: none;
+    border-radius: 0%;
+    margin-left: 200px;
+}
+
+.search-icon{
+  margin-right: 10px;
+}
+
+.secondary-bar .fa{
+  color: rgb(202, 201, 201);
 }

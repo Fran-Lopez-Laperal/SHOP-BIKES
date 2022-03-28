@@ -1,4 +1,4 @@
-import {Route, Routes} from "react-router";
+import { Route, Routes } from "react-router";
 import Footer from "./components/Footer/Footer";
 import NavBar from "./components/NavBar/NavBar";
 import ProductCategories from "./components/ProductCategories/ProductCategories";
@@ -10,21 +10,24 @@ import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
 import Secondarybar from "./components/SecondaryBar/SecondaryBar";
 import './App.css'
+import HomeCarousel from "./components/HomeCarousel/HomeCarousel";
 
 
 function App() {
   return (
     <div className="app">
       <NavBar />
-      <Secondarybar/>
+
       <div className="container">
+        <Secondarybar />
+        <HomeCarousel />
         <Routes>
           <Route path='/' element={<ProductCategories />} />
           <Route path='/products' element={<Products />} />
-          <Route path='/products/:id' element={<ProductDetail/>}></Route>
-          <Route path='/login' element={<Login/>}/>
-          <Route path='/register' element={<Register/>}/>
-          <Route path='/shopping-cart' element={<ShoppingCart/>}/>
+          <Route path='/products/:id' element={<ProductDetail />}></Route>
+          <Route path='/login' element={<Login />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/shopping-cart' element={<ShoppingCart />} />
         </Routes>
       </div>
       <Footer />
