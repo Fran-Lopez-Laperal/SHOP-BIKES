@@ -1,11 +1,6 @@
-.product-category{
-    
-}
-
-
 .product-category img {
-    height: 250px;
-    width: 210px;
+    height: 350px;
+    width: 510px;
     object-fit: cover;
 }
 
@@ -20,6 +15,15 @@
 }
 
 .category-group {
-    margin-left: 70px;
-    align-items: center;
+    margin-left: 60px;
+}
+
+#box img {
+   box-shadow: 0;
+   transition: box-shadow 1s;
+   border: 1px solid #f1efef;
+}
+
+#box:hover{
+    box-shadow: 0 0 10px #1d1c1c;
 }

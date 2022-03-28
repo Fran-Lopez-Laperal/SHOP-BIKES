@@ -4,6 +4,7 @@
     padding: 0 1.5rem 1.5rem 1.5rem;
 } 
 
+
 .product-detail .btn{
     margin-left: 135px;
     background-color: rgb(230, 135, 11);
@@ -11,7 +12,13 @@
 .product-image{
     margin-top: 70px;
     padding: 10px;
+    transition: transform .2s;
 }
+
+.product-image:hover{
+    transform: scale(1.5);
+}
+
 
 .product-price{
     margin-left:200px;

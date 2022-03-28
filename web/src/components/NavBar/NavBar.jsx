@@ -30,16 +30,17 @@ function NavBar() {
           </div>
         </div>
         <div className='d-flex div-cart'>
-          <h4>
+          <div className='logo-user' style={{width: '30px'}}>
             {user && (
               <Link className='user-name' to='/profile'>
-                {user.name}
+              <i class="fa fa-user-o" aria-hidden="true"></i>
               </Link>
+            
             )}
-          </h4>
-          
+          </div>
+
           <Link to='/shopping-cart'>
-            <i className='fa fa-shopping-cart logo-cart'></i>
+            <i class="fa fa-shopping-basket logo-basket" aria-hidden="true"></i>
           </Link>
         </div>
 

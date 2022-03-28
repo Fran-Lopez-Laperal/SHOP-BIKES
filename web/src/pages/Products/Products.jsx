@@ -1,15 +1,15 @@
 import React from "react";
-import CategoriesSideBar from "../components/CategoriesSideBar/CategoriesSideBar";
-import ProductList from "../components/ProductList/ProductList";
+import CategoriesSideBar from "../../components/CategoriesSideBar/CategoriesSideBar";
+import ProductList from "../../components/ProductList/ProductList";
 import './Products.css'
 
 
 function Products() {
 
     return (
-        <div className="d-flex ms-2">
+        <div className="d-flex">
 
-            <div className="side-bar-products me-2">
+            <div className="side-bar-products">
                 <CategoriesSideBar />
             </div>
 

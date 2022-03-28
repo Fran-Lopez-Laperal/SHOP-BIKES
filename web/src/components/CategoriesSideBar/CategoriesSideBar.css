@@ -1,26 +1,18 @@
 .side-bar {
     border: solid 1px rgb(219, 219, 219);
-
     border-left: none;
     border-top: none;
     border-bottom: none;
     border: right;
-    width: 200px;
+    width: 300px;
     height: 100%;
+    padding: 10px;
 }
 
 .side-bar li {
     text-decoration: none;
 }
 
-
-
-/* .side-text {
-    list-style: none;
-    border-radius: 5px;
-    margin-top: 4px;
-    height: 30px;
-} */
 
 .side-text {
     list-style: none;

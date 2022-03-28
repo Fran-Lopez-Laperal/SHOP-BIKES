@@ -9,39 +9,38 @@ import clothesImage from '../../assets/images/Captura de Pantalla 2022-03-22 a l
 
 function ProductCategories() {
 
-   
+
     return (
         <div className='product-category d-flex justify-content-center'>
             <div className='category-group'>
-                <div className='bike-category mb-5'>
-                    <img src={bikeImage} alt={bikeImage} />
-                    <Link to="/products?category=bike">
+                <Link to="/products?category=bike">
+                    <div className='bike-category mb-5' id='box'>
+                        <img src={bikeImage} alt={bikeImage} />
                         <p>BICICLETAS</p>
-                    </Link>
-                </div>
-                <div className='accesory-category'>
-                    <img src={accesoryImage} alt={accesoryImage} />
-                    <Link to="/products?category=accesory">
+                    </div>
+                </Link>
+
+                <Link to="/products?category=accesory">
+                    <div className='accesory-category' id='box'>
+                        <img src={accesoryImage} alt={accesoryImage} />
                         <p>COMPONENTES</p>
-                    </Link>
-
-                </div>
+                    </div>
+                </Link>
             </div>
+
             <div className='category-group'>
-                <div className='electronic-category mb-5'>
-                    <img src={electronicImage} alt={electronicImage} />
-                    <Link to="/products?category=elctronic">
+                <Link to="/products?category=elctronic">
+                    <div className='electronic-category mb-5' id='box'>
+                        <img src={electronicImage} alt={electronicImage} />
                         <p>ELECTRONICA</p>
-                    </Link>
-
-                </div>
-                <div className='clothes-category'>
-                    <img src={clothesImage} alt={clothesImage} />
-                    <Link to="/products?category=clothes">
+                    </div>
+                </Link>
+                <Link to="/products?category=clothes">
+                    <div className='clothes-category' id='box'>
+                        <img src={clothesImage} alt={clothesImage} />
                         <p>ROPA</p>
-                    </Link>
-
-                </div>
+                    </div>
+                </Link>
             </div>
         </div>
     )

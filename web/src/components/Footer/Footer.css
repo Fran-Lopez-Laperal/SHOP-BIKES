@@ -1,5 +1,5 @@
-.footer{
+.footer {
     height: 100px;
     width: auto;
-    background-color: #105ea5;
+    background: -webkit-radial-gradient(center center, circle, #818d97, #2a4a68);
 }
