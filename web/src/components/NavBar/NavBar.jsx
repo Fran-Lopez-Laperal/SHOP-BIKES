@@ -19,7 +19,7 @@ function NavBar() {
   }
 
   return (
-    <nav className="navbar navbar-light bg-light">
+    <nav className="navbar shadow navbar-expand-lg navbar-light bg-light">
       <div className="container-fluid">
         <div className="navbar-brand">
           <div className='logo-head p-1'>
@@ -39,7 +39,7 @@ function NavBar() {
         </div>
 
         <form onSubmit={handleSearch} className="d-flex">
-          <input name='search' className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+          <input name='search' className="form-control me-2" type="search" placeholder="Buscar en la tienda..." aria-label="Search" />
           <button className="btn btn-outline-success" type="submit">Search</button>
         </form>
         <div className='d-flex div-cart'>
@@ -50,7 +50,8 @@ function NavBar() {
               </Link>
             )}
           </h4>
-          <Link to='/shoppingCart'>
+          
+          <Link to='/shopping-cart'>
             <i className='fa fa-shopping-cart logo-cart'></i>
           </Link>
         </div>

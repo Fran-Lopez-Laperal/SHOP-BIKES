@@ -17,7 +17,7 @@ function ProductList() {
 
         getProducts(category, name)
             .then((products) => {
-                console.log('api',products)
+                console.log('api', products)
                 setProducts(products)
             })
     }, [search])
@@ -26,17 +26,19 @@ function ProductList() {
         return null
     }
 
-    
+
 
     return (
-        <div className='item-body d-flex row' >
+        <div className='item-body d-flex row p-5' >
             {products.map(product => (
 
-                <div className="card mt-5 me-4 mb-5" style={{ width: '16rem' }} key={products.id}>
+                <div className="card shadow p-1 mt-5 ms-4 mb-5" style={{ width: '16rem' }} key={product.id}>
                     <Link to={`/products/${product.id}`}>
-                        <img src={product.image} className="card-img-top mt-2 p-3" alt={product.name} />
+                        <div className='inner'>
+                            <img src={product.image} className="card-img-top mt-2 p-3" alt={product.name} />
+                        </div>
                     </Link>
-                    <hr/>
+                    <hr />
                     <div className="card-body">
                         <h5 className="card-title">{product.name}</h5>
                         <small>{product.price}€</small>

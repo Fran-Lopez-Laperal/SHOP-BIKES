@@ -8,12 +8,15 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
+import Secondarybar from "./components/SecondaryBar/SecondaryBar";
+import './App.css'
 
 
 function App() {
   return (
     <div className="app">
       <NavBar />
+      <Secondarybar/>
       <div className="container">
         <Routes>
           <Route path='/' element={<ProductCategories />} />

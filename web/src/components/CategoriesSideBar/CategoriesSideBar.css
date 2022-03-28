@@ -1,6 +1,6 @@
-.side-bar{
+.side-bar {
     border: solid 1px rgb(219, 219, 219);
-  
+
     border-left: none;
     border-top: none;
     border-bottom: none;
@@ -9,17 +9,35 @@
     height: 100%;
 }
 
-.side-bar li{
+.side-bar li {
     text-decoration: none;
 }
 
 
 
-.side-text{
+/* .side-text {
     list-style: none;
     border-radius: 5px;
     margin-top: 4px;
     height: 30px;
-    }
+} */
 
-  
+.side-text {
+    list-style: none;
+    text-align: center;
+    text-decoration: none;
+    height: 30px;
+    background-color: #425ec0;
+    border-radius: 5px;
+    color: white;
+    padding: 6px 8px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.side-text:hover {
+    opacity:5
+}

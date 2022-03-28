@@ -9,7 +9,7 @@ function Products() {
     return (
         <div className="d-flex ms-2">
 
-            <div className="side-bar-products me-5">
+            <div className="side-bar-products me-2">
                 <CategoriesSideBar />
             </div>
 

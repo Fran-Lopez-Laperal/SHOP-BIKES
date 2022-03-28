@@ -7,34 +7,33 @@ function CategoriesSideBar() {
 
 
     return (
-        <ul className="side-bar unstylled-list">
-            <li className="side-text ">
-                <Link to="/products?category=bike">
-                    <i className="icon me-2 fa fa-bicycle"></i>
+        <ul className="side-bar unstylled-list pt-5">
+            <Link to="/products?category=bike">
+                <li className="side-text">
+                    <i className="icon me-2 fa fa-bicycle fa-fw"></i>
                     Bicicletas
-                </Link>
-            </li>
-
-            <li className="side-text">
-                <Link  to="/products?category=electronic">
-                    <i className="icon me-2 fa fa-bluetooth-b" aria-hidden="true"></i>
+                </li>
+            </Link>
+            <Link to="/products?category=electronic">
+                <li className="side-text">
+                    <i className="icon me-2 fa fa-bluetooth-b fa-fw" aria-hidden="true"></i>
                     Eléctronica
-                </Link>
-            </li>
+                </li>
+            </Link>
 
-            <li className="side-text">
-                <Link to="/products?category=components">
-                    <i className="icon me-2 fa fa-steam"></i>
+            <Link to="/products?category=components">
+                <li className="side-text">
+                    <i className="icon me-2 fa fa-steam fa-fw"></i>
                     Componentes
-                </Link>
-            </li>
+                </li>
+            </Link>
 
-            <li className="side-text">
-                <Link to="/products?category=clothes">
-                <i className="icon me-2 fa fa-shopping-cart"></i>
+            <Link className="success" to="/products?category=clothes">
+                <li className="side-text">
+                    <i className="icon me-2 fa fa-shopping-cart fa-fw"></i>
                     Ropa
-                </Link>
-            </li>
+                </li>
+            </Link>
 
         </ul>
     )

@@ -11,7 +11,7 @@ function ProductCategories() {
 
    
     return (
-        <div className='home d-flex'>
+        <div className='home p-5 d-flex'>
             <div className='category-group'>
                 <div className='bike-category mb-5'>
                     <img src={bikeImage} alt={bikeImage} />

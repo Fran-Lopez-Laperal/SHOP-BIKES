@@ -1,0 +1,5 @@
+.secondary-bar{
+  width: auto;
+  height: 50px;
+  background:-webkit-radial-gradient(center center, circle, black, #1162ac)
+}
