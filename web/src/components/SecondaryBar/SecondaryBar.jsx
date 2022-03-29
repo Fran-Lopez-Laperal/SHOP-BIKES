@@ -8,7 +8,7 @@ function Secondarybar() {
 
         const { search } = e.target.elements
         e.preventDefault()
-        navigate(`/products?category=${search.value}`)
+        navigate(`/products?name=${search.value}`)
 
     }
 

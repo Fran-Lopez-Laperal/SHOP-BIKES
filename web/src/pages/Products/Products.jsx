@@ -7,9 +7,9 @@ import './Products.css'
 function Products() {
 
     return (
-        <div className="d-flex">
+        <div className="d-flex ms-2">
 
-            <div className="side-bar-products">
+            <div className="side-bar-products me-2">
                 <CategoriesSideBar />
             </div>
 

@@ -88,7 +88,4 @@ export function addProductToCart(productId) {
 export function upsertCart(cart) {
   console.log(cart)
   return http.put('/api/shopping-cart', cart)
-  .catch(error => {
-    console.log('hola', error)
-  })
 }

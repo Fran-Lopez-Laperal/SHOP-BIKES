@@ -1,0 +1,9 @@
+.register{
+    display: flex;
+}
+
+.register .register-info{
+    background-color: lightgrey;
+    height: auto;
+    list-style:none;
+}

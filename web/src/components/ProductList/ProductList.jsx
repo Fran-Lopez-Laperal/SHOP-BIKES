@@ -1,3 +1,5 @@
+
+   
 import './PorductList.css'
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
@@ -13,7 +15,7 @@ function ProductList() {
 
         const url = new URLSearchParams(search)
         const category = url.get("category")
-        const name = url.get("search")
+        const name = url.get("name")
 
         getProducts(category, name)
             .then((products) => {
@@ -29,7 +31,7 @@ function ProductList() {
 
 
     return (
-        <div className='item-body d-flex row p-5' >
+        <div className='item-body  col-2' >
             {products.map(product => (
 
                 <div className="card shadow p-1 mt-5 ms-4 mb-5" style={{ width: '16rem' }} key={product.id}>
