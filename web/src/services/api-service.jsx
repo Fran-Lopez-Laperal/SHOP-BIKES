@@ -41,6 +41,10 @@ export function register(user) {
   return http.post('api/register', user)
 }
 
+export function userProfile(id) {
+  return
+}
+
 export function getCart() {
 
   return http.get('api/shopping-cart')

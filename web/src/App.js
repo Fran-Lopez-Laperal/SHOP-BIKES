@@ -10,6 +10,7 @@ import ProductDetail from "./components/ProductDetail/ProductDetail";
 import Secondarybar from "./components/SecondaryBar/SecondaryBar";
 import './App.css'
 import Home from "./pages/Home/Home";
+import Profile from "./components/Profile/Profile";
 
 
 function App() {
@@ -22,9 +23,10 @@ function App() {
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/products' element={<Products />} />
-          <Route path='/products/:id' element={<ProductDetail />}></Route>
+          <Route path='/products/:id' element={<ProductDetail />}/>
           <Route path='/login' element={<Login />} />
           <Route path='/register' element={<Register />} />
+          <Route path='/profile' element={<Profile/>}/>
           <Route path='/shopping-cart' element={<ShoppingCart />} />
         </Routes>
       </div>

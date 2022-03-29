@@ -2,6 +2,7 @@ import React from "react";
 import './Register.css'
 import { useNavigate } from "react-router";
 import { register } from "../../services/api-service";
+import { Link } from "react-router-dom";
 
 function Register() {
     const [data, setData] = React.useState({
@@ -34,25 +35,26 @@ function Register() {
     }
 
     return (
-        <div className="register">
-            <ul className="register-info p-4">
+
+        <div className="register mt-5 mb-5 p-5">
+            <ul className="register-info w-50 p-5 ">
                 <li className="">
                     <h2>Requisitos para registrarse</h2>
                 </li>
                 <li>
-                    <small>Introducir un e-mail que ya no se haya utilizado anteriormente</small>
+                    <small><i class="fa fa-check" aria-hidden="true"></i> Introducir un e-mail que ya no se haya utilizado anteriormente</small>
                 </li>
                 <li>
-                    <small>Introducir una contraseña de al menos 9 caracteres sin espacios</small>
+                    <small><i class="fa fa-check" aria-hidden="true"></i>Introducir una contraseña de al menos 9 caracteres sin espacios</small>
                 </li>
                 <li>
-                    <small>Introducir tu nombre</small>
+                    <small><i class="fa fa-check" aria-hidden="true"></i>Introducir tu nombre</small>
                 </li>
 
             </ul>
 
-            <div className="register-form col-4">
-                <form onSubmit={handleSubmit}>
+            <div className="div-form w-50 p-5">
+                <form className="" onSubmit={handleSubmit}>
 
                     <div className="mb-3">
                         {error && <div className="alert alert-danger">{error}</div>}
@@ -94,13 +96,14 @@ function Register() {
                         />
                     </div>
 
-
-
-                    <button type="submit" className="btn btn-primary">
-                        Register
+                    <hr />
+                    <button type="submit" className="btn btn-danger col-12 mb-1">
+                        Registrarse
                     </button>
-
                 </form>
+                <Link to='/login' className="btn btn-primary col-12">
+                    Iniciar Sesión
+                </Link>
             </div>
 
         </div>

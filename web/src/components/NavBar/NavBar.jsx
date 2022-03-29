@@ -9,6 +9,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 function NavBar() {
   const { user } = React.useContext(AuthContext)
 
+  
 
   return (
     <nav className="navbar shadow navbar-expand-lg navbar-light bg-light">
@@ -30,18 +31,43 @@ function NavBar() {
           </div>
         </div>
         <div className='d-flex div-cart'>
-          <div className='logo-user' style={{width: '30px'}}>
-            {user && (
-              <Link className='user-name' to='/profile'>
-              <i class="fa fa-user-o" aria-hidden="true"></i>
+          <div className='logo-user'>
+
+            {!user ? (
+              <div className=''>
+                <Link className='user-register text-center' to='/register'>
+                  <i class="fa fa-user-o" aria-hidden="true"></i>
+                  <span className='register'>Registro</span>
+                </Link>
+              </div>
+
+            )
+              :
+              <div className='profile-div d-flex '>
+                <Link className='user-profile text-center' to='/profile'>
+                  <i class="fa fa-user" aria-hidden="true"></i>
+                  <span className='register '>Tú Perfil</span>
+                </Link>
+              </div>
+            }
+{/* 
+            {user.role === 'admin'(
+            <div className=''>
+              <Link className='user-register text-center' to='/register'>
+                <i class="fa " aria-hidden="true"></i>
+                <span className='register'>Admin</span>
               </Link>
-            
-            )}
+            </div>
+          )} */}
           </div>
 
-          <Link to='/shopping-cart'>
-            <i class="fa fa-shopping-basket logo-basket" aria-hidden="true"></i>
-          </Link>
+          {user &&
+            <div className='cart-icon'>
+              <Link to='/shopping-cart'>
+                <i class="fa fa-shopping-basket logo-basket" aria-hidden="true"></i>
+              </Link>
+            </div>
+          }
         </div>
 
       </div>
