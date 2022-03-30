@@ -12,18 +12,15 @@ function HomeCarousel() {
 
                     <div className="carousel-inner">
                         <div className="carousel-item active">
-                            <img src={img1} className="d-block" alt={img1} />
-                            <a className='btn '>DESCUBRELO</a>
+                            <img src={img1} className="d-block" alt={img1} />                    
                         </div>
-
+                        
                         <div className="carousel-item">
-                            <img src={img2} className="d-block" alt={img2} />
-                            <a className='btn'>DESCUBRELO</a>
+                            <img src={img2} className="d-block" alt={img2} />                      
                         </div>
 
                         <div className="carousel-item">
                             <img src={img3} className="d-block" alt={img3} />
-                            <a className='btn'>DESCUBRELO</a>
                         </div>
                     </div>
                     <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

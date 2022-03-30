@@ -7,7 +7,7 @@ import './Products.css'
 function Products() {
 
     return (
-        <div className="d-flex ms-2">
+        <div className="products d-flex ms-2">
 
             <div className="side-bar-products me-2">
                 <CategoriesSideBar />

@@ -36,16 +36,11 @@ function Footer() {
                 <div>
                     <ul>
                         <li>
-                            <small>Fran</small>
-                        </li>
-                        <li>
-                            <small>Paula</small>
-                        </li>
-                        <li>
-                            <small>Terry</small>
+                            <small></small>
                         </li>
                     </ul>
                 </div>
+                
             </div>
 
 

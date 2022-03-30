@@ -4,10 +4,12 @@
     padding: 0 1.5rem 1.5rem 1.5rem;
 } 
 
+.delete-button {
+    margin-left: 165px;
+}
 
 .product-detail .btn{
     margin-left: 135px;
-    background-color: rgb(230, 135, 11);
 }
 .product-detail .product-image{
     margin-top: 70px;

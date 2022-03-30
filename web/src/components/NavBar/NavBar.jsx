@@ -9,7 +9,7 @@ import { AuthContext } from '../../contexts/AuthContext';
 function NavBar() {
   const { user } = React.useContext(AuthContext)
 
-  
+
 
   return (
     <nav className="navbar shadow navbar-expand-lg navbar-light bg-light">
@@ -34,26 +34,35 @@ function NavBar() {
           <div className='logo-user'>
 
             {!user ? (
-              <div className=''>
-                <Link className='user-register text-center' to='/register'>
-                  <i class="fa fa-user-o" aria-hidden="true"></i>
-                  <span className='register'>Registro</span>
-                </Link>
+              <div className='d-flex'>
+                <div className='d-flex me-3'>
+                  <Link className='user-register text-center' to='/register'>
+                  <i class="fa fa-user-plus" aria-hidden="true"></i>
+                    <span className='register'>Registro</span>
+                  </Link>
+                </div>
+                <div className='d-flex'>
+                  <Link className='user-register text-center' to='/login'>
+                  <i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <span className='register'>Inicio sesión</span>
+                  </Link>
+                </div>
               </div>
+
 
             )
               :
               <div className='profile-div d-flex '>
                 <Link className='user-profile text-center' to='/profile'>
                   <i class="fa fa-user" aria-hidden="true"></i>
-                  <span className='register '>Tú Perfil</span>
+                  <span className='register '>{user.name.slice(0, 4)}</span>
                 </Link>
               </div>
             }
-{/* 
-            {user.role === 'admin'(
+
+            {/* {(user.role === "admin") && (
             <div className=''>
-              <Link className='user-register text-center' to='/register'>
+              <Link className='user-register text-center' to='/profile'>
                 <i class="fa " aria-hidden="true"></i>
                 <span className='register'>Admin</span>
               </Link>

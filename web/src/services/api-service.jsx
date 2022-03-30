@@ -41,6 +41,10 @@ export function register(user) {
   return http.post('api/register', user)
 }
 
+export function deleteProduct(id) {
+  return http.delete(`/api/events/${id}`);
+}
+
 export function userProfile(id) {
   return
 }

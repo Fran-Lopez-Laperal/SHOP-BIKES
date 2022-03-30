@@ -11,8 +11,8 @@ function ProductCategories() {
 
 
     return (
-        <div className='product-category d-flex justify-content-center'>
-            <div className='category-group'>
+        <div className='product-category d-flex justify-content-center mb-5'>
+            <div className='category-group mt-5 mb-5'>
                 <Link to="/products?category=bike">
                     <div className='bike-category mb-5' id='box'>
                         <img src={bikeImage} alt={bikeImage} />
@@ -28,7 +28,7 @@ function ProductCategories() {
                 </Link>
             </div>
 
-            <div className='category-group'>
+            <div className='category-group mt-5 mb-5'>
                 <Link to="/products?category=elctronic">
                     <div className='electronic-category mb-5' id='box'>
                         <img src={electronicImage} alt={electronicImage} />

@@ -59,7 +59,7 @@ function Register() {
                     <div className="mb-3">
                         {error && <div className="alert alert-danger">{error}</div>}
                         <label for="name" className="form-label">
-                            User Name
+                           Nombre completo
                         </label>
                         <input
                             type="name"
@@ -85,13 +85,25 @@ function Register() {
 
                     <div className="mb-3">
                         <label for="password" className="form-label">
-                            Password
+                            Contraseña
                         </label>
                         <input
                             type="password"
                             className="form-control"
                             id="password"
                             value={data.password}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <div className="mb-3">
+                        <label for="adress" className="form-label">
+                            Dirección de envío
+                        </label>
+                        <input
+                            type="adress"
+                            className="form-control"
+                            id="adress"
+                            value={data.adress}
                             onChange={handleChange}
                         />
                     </div>

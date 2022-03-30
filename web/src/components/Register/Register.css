@@ -1,11 +1,12 @@
 .register{
     display: flex;
     justify-content: space-between;
+    background-color: rgba(211, 211, 211, 0.137);
 }
 
 .register .register-info{
     background-color: lightgrey;
-    height: 350px;
+    height: 435px;
     list-style:none;
     margin-top: 55px;
 }

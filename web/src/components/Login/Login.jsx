@@ -4,8 +4,15 @@ import './Login.css'
 import { Navigate, useNavigate, } from "react-router";
 import { AuthContext } from "../../contexts/AuthContext";
 import { login } from "../../services/api-service"
+// import { GoogleLogin } from 'react-google-login';
+
 
 function Login() {
+
+    // const responseGoogle = (response) => {
+    //     console.log(response)
+    // }
+   
 
     const [data, setData] = React.useState({
         email: '',
@@ -45,12 +52,26 @@ function Login() {
 
     return (
         <div className="login col-4 mb-5 mt-5 p-2 ">
+            {/* <div className="google-login">
+                <GoogleLogin
+                    clientId="965233685400-557b783as366slo7np8komi38h0al799.apps.googleusercontent.com"
+                    buttonText="Login"
+                    onSuccess={responseGoogle}
+                    isSignedIn = { true } 
+                    onFailure={responseGoogle}
+                    cookiePolicy={'single_host_origin'}
+                />
+                
+            </div> */}
+
+
+            <h3>Iniciar de Sesión</h3>
             <form className="" onSubmit={handleSubmit} >
 
                 <div className="mb-3">
                     {error && <div className="alert alert-danger">{error}</div>}
                     <label for="exampleInputEmail1" className="form-label">
-                        Email address
+                        Email de usuario
                     </label>
                     <input
                         type="email"
@@ -63,7 +84,7 @@ function Login() {
 
                 <div className="mb-3">
                     <label for="exampleInputPassword1" className="form-label">
-                        Password
+                        Contraseña
                     </label>
                     <input
                         type="password"
