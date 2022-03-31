@@ -17,6 +17,7 @@ function Profile() {
         <div class="card-body text-center">
           <h5 class="card-title text-center">{user.name}</h5>
           <p class="card-text">{user.email}</p>
+          <p className="card-text">{user.adress}</p>
           <button onClick={handleLogout} class="btn btn-danger">Cerrar Sesión</button>
         </div>
         <div class="card-footer text-muted">

@@ -1,5 +1,6 @@
 .navbar {
     background-color: #425ec0;
+    height: 100px;
 }
 
 .logo-head {
@@ -27,4 +28,8 @@
 
 .profile-div {
     width: 80px;
+}
+
+.form-search{
+    margin-left: 400px;
 }

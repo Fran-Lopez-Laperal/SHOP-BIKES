@@ -8,7 +8,7 @@ module.exports.upsert = (req, res, next) => {
     ShoppingCart.findOneAndUpdate(
         { owner: req.user.id },
         cart,
-        { new: true, runValidators: true, upsert: true, populate: { path: "products.product", select: "name price" } })
+        { new: true, runValidators: true, upsert: true, populate: { path: "products.product", select: "name price image" } })
         .then(cart => res.status(201).json(cart))
         .catch(error => next(error))
 }
@@ -36,7 +36,8 @@ module.exports.order = (req, res, next) => {
                         return {
                             product: cardItem.product.id,
                             amount: cardItem.amount,
-                            price: cardItem.product.price
+                            price: cardItem.product.price,
+                            image: cardItem.product.image
                         }
                     }),
                     owner: req.user.id,

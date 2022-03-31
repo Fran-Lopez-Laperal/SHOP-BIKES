@@ -1,22 +1,42 @@
 .secondary-bar {
   width: auto;
-  height: 50px;
+  height: 75px;
   background: -webkit-radial-gradient(center center, circle, #5d6c79, #1162ac);
   justify-items: center;
+  background-image: url(../../assets/CarouselImages/sram_x01_eagle_2021_accion_1.jpeg);
+  background-repeat: no-repeat;
+ background-size: cover;
+ background-position: 1px;
 }
 
 .secondary-bar .secondary-form {
+  margin-left: 320px;
   position: relative;
   float: right;
 }
 
+.inner p {
+  transition: all 1.5s ease;
+}
+
+.inner:hover p {
+  transform: scale(1.5);
+}
+
+.secondary-bar ::placeholder {
+  color: white;
+
+}
+
+
+
 .secondary-bar .form-control {
   background-color: transparent;
   border: solid 1px;
-  width: 250px;
+  width:  500px;
   height: 25px;
   text-decoration: none;
-  color: white;
+  color: darkgray;
   border-left: none;
   border-right: none;
   border-top: none;
@@ -30,20 +50,4 @@
 
 .secondary-bar .fa {
   color: white;
-}
-
-.inner p {
-  transition: all 1.5s ease;
-}
-
-.inner:hover p {
-  transform: scale(1.5);
-}
-
-.secondary-bar ::placeholder {
-  color: white;
-}
-
-.category-table {
-  list-style: none;
 }

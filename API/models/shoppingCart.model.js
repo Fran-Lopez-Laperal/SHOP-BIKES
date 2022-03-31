@@ -40,7 +40,7 @@ shoppingCartSchema.virtual('total').get(function () {
 })
 
 shoppingCartSchema.pre('findOne', function (next) {
-    this.populate('products.product', 'name price')
+    this.populate('products.product', 'name price image')
     next()
 })
 

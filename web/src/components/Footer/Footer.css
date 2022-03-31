@@ -2,4 +2,19 @@
     height: 100px;
     width: auto;
     background: -webkit-radial-gradient(center center, circle, #818d97, #2a4a68);
+    list-style: none;
+
+}
+
+.footer ul{
+    list-style: none;
+}
+
+.footer i {
+    color: white;
+    text-decoration: none;
+   
+}
+.footer fa {
+    width: 30px;
 }

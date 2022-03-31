@@ -5,41 +5,24 @@ function Footer() {
     return (
         <footer className='footer'>
             <div className='d-flex'>
-                <div>
-                    <ul>
+                <div c>
+                    <ul className='footer-table'>
                         <li>
-                            <small>Fran</small>
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        Facebook
                         </li>
                         <li>
-                            <small>Paula</small>
+                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        Instagram
                         </li>
                         <li>
-                            <small>Terry</small>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <ul>
-                        <li>
-                            <small>Fran</small>
-                        </li>
-                        <li>
-                            <small>Paula</small>
-                        </li>
-                        <li>
-                            <small>Terry</small>
+                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        Contacto 
                         </li>
                     </ul>
                 </div>
 
-                <div>
-                    <ul>
-                        <li>
-                            <small></small>
-                        </li>
-                    </ul>
-                </div>
+               
                 
             </div>
 

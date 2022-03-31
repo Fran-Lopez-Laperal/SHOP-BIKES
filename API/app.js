@@ -12,6 +12,23 @@ require('./config/db.config');
 const app = express();
 
 /**Middlewares */
+
+// CORS config
+app.use((req, res, next) => {
+    res.setHeader(
+        "Access-Control-Allow-Origin",
+        process.env.CORS_ORIGIN || "http://localhost:3000"
+    );
+    res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+    res.setHeader("Access-Control-Allow-Credentials", "true");
+    res.setHeader("Access-Control-Allow-Methods", "*");
+
+    if (req.method === "OPTIONS") {
+        return res.status(200).send();
+    }
+
+    next();
+});
 /** para que sepa leer el body las peticiones post que vienen en forma de JSON*/
 app.use(express.json());
 /** para que cada vez que llegue una peticion http se responda con el estado correspondiente*/
@@ -40,7 +57,12 @@ app.use((error, req, res, next) => {
     data.message = error.message;
     if (error.errors) {
         data.errors = Object.keys(error.errors)
-            .reduce((errors, key) => ({ ...errors, [key]: error.errors[key]?.message || error.errors[key] }), {})
+            .reduce((errors, key) => ({
+                ...errors,
+                [key]: error.errors[key]?.message || error.errors[key],
+            }),
+                {}
+            );
     }
 
     res.status(error.status).json(data)

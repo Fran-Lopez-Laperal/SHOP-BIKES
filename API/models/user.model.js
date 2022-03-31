@@ -24,9 +24,14 @@ const userSchema = new Schema({
 
     password: {
         type: String,
-        required: 'Email is required',
+        required: 'Password is required',
         trim: true,
         match: [PASSWORD_PATTERN, 'Password needs at least 8 chars']
+    },
+
+    adress: {
+        type: String,
+        required: 'Direction adress is required',
     },
     role: {
         type: String,
@@ -70,8 +75,7 @@ userSchema.methods.checkPassword = function (passwordToCheck) {
 
 userSchema.methods.isAdmin = function () {
     return this.role === 'admin';
-  }
-  
+}
 
 const User = mongoose.model('User', userSchema);
 module.exports = User;
