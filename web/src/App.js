@@ -11,6 +11,7 @@ import Secondarybar from "./components/SecondaryBar/SecondaryBar";
 import './App.css'
 import Home from "./pages/Home/Home";
 import Profile from "./components/Profile/Profile";
+import CartOrder from "./components/CartOrder/CartOrder";
 
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
           <Route path='/register' element={<Register />} />
           <Route path='/profile' element={<Profile/>}/>
           <Route path='/shopping-cart' element={<ShoppingCart />} />
+          <Route path='/shopping-cart/order' element={<CartOrder/>} />
         </Routes>
       </div>
       <Footer />

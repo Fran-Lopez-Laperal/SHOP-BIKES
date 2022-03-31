@@ -1,18 +1,17 @@
 import { useEffect, useState } from "react"
-import { getCart } from "../../services/api-service"
+import { getCart, order } from "../../services/api-service"
 import moment from "moment"
 import './ShoppingCart.css'
-import { Link } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 function ShoppingCart() {
 
-
+    const navigate = useNavigate()
     const [cart, setCart] = useState(undefined)
 
 
     useEffect(() => {
         getCart().then((cart) => {
-            console.log(cart)
             setCart(cart)
         })
     }, [])
@@ -21,7 +20,12 @@ function ShoppingCart() {
         return null
     }
 
-
+    
+    function handleOrder () {
+        order().then(() => {
+            navigate('/orders')
+        })
+    }
 
     return (
         <div className="shopping-cart d-flex flex-column">
@@ -74,11 +78,11 @@ function ShoppingCart() {
                 <Link className="ms-auto btn bg-light" to='/products'></Link>
 
                 <Link to='/shopping-cart/order' className="btn btn-danger ">
-                    <i className="fa fa-shopping-cart"></i> Realizar pedido
+                    <i className="fa fa-shopping-cart" onClick={handleOrder}></i> Realizar pedido
                 </Link>
             </div>
         </div>
     )
 }
 
-export default ShoppingCart
+export default ShoppingCart 

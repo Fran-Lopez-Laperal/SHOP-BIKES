@@ -25,7 +25,7 @@ http.interceptors.response.use(
 
 export function getProducts(category, name) {
 
-  return http.get('api/products/', { params: { category, name } })
+  return http.get('api/products', { params: { category, name } })
 }
 
 export function getDetailProduct(id) {
@@ -42,7 +42,7 @@ export function register(user) {
 }
 
 export function deleteProduct(id) {
-  return http.delete(`/api/events/${id}`);
+  return http.delete(`/api/products/${id}`);
 }
 
 export function userProfile(id) {
@@ -96,4 +96,13 @@ export function addProductToCart(productId) {
 export function upsertCart(cart) {
   console.log(cart)
   return http.put('/api/shopping-cart', cart)
+}
+
+
+export function order(){
+  return http.post('/api/shopping-cart/order')
+}
+
+export function getOrder () {
+  return http.get('/api/orders')
 }
