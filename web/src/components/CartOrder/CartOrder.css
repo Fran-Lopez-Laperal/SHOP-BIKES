@@ -2,7 +2,49 @@
     background-color: white;
 }
 
+#cart-order{
+    background-color: rgba(128, 128, 128, 0.123);
+    padding: 10px 5px;
+}
+
 .user-adress{
     font-weight: 300;
     color:gray
+}
+
+
+.img1-order{
+    width: 75px;
+}
+
+.delivery-gls h6{
+    margin-top: 10px;
+}
+
+.order-credit-card img{
+    width: 150px;
+}
+
+.credit-card{
+    background-color: #dd5573;
+    color: white
+}
+
+.credit-card > img{
+    height: 30px;
+}
+
+
+.credit-card{
+    max-width: 300px;
+}
+
+.credit-card-expires > small{
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.cart-order h6{
+    color: #77d146;
 }
