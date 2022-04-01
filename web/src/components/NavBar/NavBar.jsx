@@ -1,6 +1,6 @@
 
 import './NavBar.css'
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import React from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 
@@ -8,14 +8,14 @@ import { AuthContext } from '../../contexts/AuthContext';
 
 function NavBar() {
   const { user } = React.useContext(AuthContext)
-  const navigate = useNavigate
-  function handleSearch(e) {
+  // const navigate = useNavigate
+  // function handleSearch(e) {
 
-    const { search } = e.target.elements
-    e.preventDefault()
-    navigate(`/products?name=${search.value}`)
+  //   const { search } = e.target.elements
+  //   e.preventDefault()
+  //   navigate(`/products?name=${search.value}`)
 
-  }
+  // }
 
 
   return (

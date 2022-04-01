@@ -5,11 +5,12 @@ import './CartOrder.css'
 import img1 from '../../assets/pay-images/gls.png'
 import img2 from '../../assets/pay-images/mondial-relay.png'
 import img3 from '../../assets/pay-images/adyen_hpp_v4.png'
+import Loading from "../Loading/Loading";
 const number = '4323 2344 2344 2343'
 
 function CartOrder() {
 
-
+    const [loading, setLoading] = React.useState(false)
     const [orders, setOrders] = React.useState(null)
     const { user } = React.useContext(AuthContext)
 
@@ -19,12 +20,27 @@ function CartOrder() {
         })
     }, [])
 
-    if (!orders) {
-        return null
+    const handleLoading = () => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false)
+        }, 5000);
     }
+
+
+    if (!orders) {
+        return false
+    }
+
+    if (loading) {
+        return <Loading />
+    }
+
+
 
     return (
         <>
+
             <div className="d-flex mt-5 mb-5">
                 <div className="info-user-order w-75" >
                     <div className="info-order-user p-5 border rounded-3 mb-3 d-flex flex-column" id="group">
@@ -42,7 +58,7 @@ function CartOrder() {
                         </div>
                     </div>
 
-                    <div className="p-5 rounded-3 mb-3 d-flex flex-column" id="group">
+                    <div className="p-5 rounded-3 mb-3 d-flex flex-column border" id="group">
 
                         <h5><i className="fa fa-truck me-3 mb-5" aria-hidden="true"></i>Método de envío</h5>
 
@@ -71,7 +87,7 @@ function CartOrder() {
                         </div>
                     </div>
 
-                    <div className="order-credit-card p-5 rounded-3" id="group">
+                    <div className="order-credit-card p-5 rounded-3 border" id="group">
                         <h5 className="mb-5">
                             <i class="fa fa-credit-card-alt me-3" aria-hidden="true"></i>
                             Método de pago
@@ -104,8 +120,10 @@ function CartOrder() {
                     </div>
                 </div>
 
-                <div className="cart-order p-5 ms-5 rounded-3 w-50" id="group">
-                    <h5 className="mb-5"><i className="fa fa-cart-arrow-down me-3" aria-hidden="true"></i>Resumen del pedido</h5>
+                <div className="cart-order p-5 ms-5 rounded-3 w-50 border" id="group">
+                    <h5 className="mb-5"><i className="fa fa-cart-arrow-down me-3" aria-hidden="true"></i>
+                        Resumen del pedido
+                    </h5>
                     {orders.map(order =>
                         <div>
                             <div className="cart-order-total d-flex flex-colunm">
@@ -122,10 +140,18 @@ function CartOrder() {
                                 <h5 className="fw-bold mt-1">{order.total} €</h5>
                             </div>
                             <div>
-                                <button className="btn btn-danger grid mt-3 col-12">
-                                    <i className="fa fa-cart-arrow-down me-5" aria-hidden="true"></i>
-                                    Realizar pedido
-                                </button>
+                                {loading ? (
+                                    <Loading />
+                                )
+                                    :
+                                    <button className="btn btn-danger grid mt-3 col-12" onClick={() => handleLoading()}>
+                                        <i className="fa fa-cart-arrow-down me-5" aria-hidden="true"></i>
+                                        Realizar pedido
+                                    </button>
+                                }
+
+
+
                             </div>
 
                         </div>
@@ -141,20 +167,16 @@ function CartOrder() {
                                 <div>
                                     {product.amount}
                                 </div>
-                                <div>
-                                    {product.image}
-                                </div>
-                                <div>
-                                    {product.name}
-                                </div>
                             </div>
                         ))
                     )}
+
                 </div>
 
             </div>
         </>
-    )
+    );
+
 }
 
 export default CartOrder
