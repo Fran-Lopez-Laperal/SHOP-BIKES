@@ -48,3 +48,18 @@ function CategoriesSideBar() {
 }
 
 export default CategoriesSideBar
+
+
+
+// {orders.map(order =>
+//     order.products.map(product => (
+//         <div key={product.id}>
+//             <div>
+//                 <h1 className="border">{product.price}</h1>
+//             </div>
+//             <div>
+//                 {product.amount}
+//             </div>
+//         </div>
+//     ))
+// )}

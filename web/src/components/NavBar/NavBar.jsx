@@ -47,13 +47,13 @@ function NavBar() {
                 <div className='d-flex'>
                   <div className='d-flex me-3'>
                     <Link className='user-register text-center' to='/register'>
-                      <i class="fa fa-user-plus" aria-hidden="true"></i>
+                      <i className="fa fa-user-plus" aria-hidden="true"></i>
                       <span className='register'>Registro</span>
                     </Link>
                   </div>
                   <div className='d-flex'>
                     <Link className='user-register text-center' to='/login'>
-                      <i class="fa fa-sign-in" aria-hidden="true"></i>
+                      <i className="fa fa-sign-in" aria-hidden="true"></i>
                       <span className='register'>Inicio sesión</span>
                     </Link>
                   </div>
@@ -64,7 +64,7 @@ function NavBar() {
                 :
                 <div className='profile-div d-flex '>
                   <Link className='user-profile text-center' to='/profile'>
-                    <i class="fa fa-user" aria-hidden="true"></i>
+                    <i className="fa fa-user" aria-hidden="true"></i>
                     <span className='register '>{user.name.slice(0, 4)}</span>
                   </Link>
                 </div>
@@ -74,7 +74,7 @@ function NavBar() {
             {user &&
               <div className='cart-icon d-flex'>
                 <Link className='text-center' to='/shopping-cart'>
-                  <i class="fa fa-shopping-basket logo-basket" aria-hidden="true"></i>
+                  <i className="fa fa-shopping-basket logo-basket" aria-hidden="true"></i>
                   <span className='register'>Mi carrito</span>
                 </Link>
               </div>
