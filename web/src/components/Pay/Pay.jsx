@@ -23,9 +23,9 @@ function Pay() {
     return (
         <div className='pay mt-5 mb-5 d-flex align-items-center'>
             {orders.map(order =>
-                <div className='pay-info ms-5'>
+                <div key={order.id} className='pay-info ms-5'>
                     <div className='d-flex justify-content-between'>
-                        <h1>Datos de envío</h1>
+                        <h4>Datos de envío</h4>
                         <div className='px-5 d-flex flex-column text-end'>
                             <h3 className='fw-light'>{user.name}</h3>
                             <h3 className='fw-light'>{user.adress}</h3>
@@ -33,17 +33,20 @@ function Pay() {
                     </div>
 
                     <hr />
-                    <div className='d-flex align-items-center justify-content-between'>
-                        <h1>Estado del pedido</h1>
-                        <h3 className='px-5'>{order.state}</h3>
+                    <div className='info-process d-flex align-items-center justify-content-between'>
+                        <h4>Estado del pedido</h4>
+                        <h3 className='px-5 fw-light'>{order.state}</h3>
                     </div>
                     <hr />
-                    <div>
-                    <h5>Estado y fecha estimada de llegada</h5>
-                    <h1>{moment().add(6, 'days').calendar()}</h1>
-                    <h1>{order.total}  €</h1>
+                    <div className='d-flex align-items-center justify-content-between'>
+                        <h4>Estado y fecha estimada de llegada</h4>
+                        <div className='px-5 text-end'>
+                            <h1 className='fw-light'>{moment().add(6, 'days').calendar()}</h1>
+                            <h1 className='fw-light'>{order.total}  €</h1>
+                        </div>
+
                     </div>
-                    
+
                 </div>
             )}
         </div>

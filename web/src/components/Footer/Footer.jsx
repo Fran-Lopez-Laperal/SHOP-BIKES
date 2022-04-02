@@ -8,15 +8,15 @@ function Footer() {
                 <div c>
                     <ul className='footer-table'>
                         <li>
-                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        <i className="fa fa-facebook-official"></i>
                         Facebook
                         </li>
                         <li>
-                        <i class="fa fa-instagram" aria-hidden="true"></i>
+                        <i className="fa fa-instagram"></i>
                         Instagram
                         </li>
                         <li>
-                        <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        <i className="fa fa-envelope-o"></i>
                         Contacto 
                         </li>
                     </ul>

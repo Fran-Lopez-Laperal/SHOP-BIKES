@@ -1,9 +1,10 @@
+.cart{
+    background-color: white;
+}
 
 .moment{
     color: #77d146;
 }
-
-
 
 .cart-price{
     font-weight: 700;
@@ -14,14 +15,22 @@
     max-width: 200px;
 }
 
-
 .shopping-cart .bg-light{
     height: 60px;
 }
 
 .shopping-cart .bg-light > small {
     color: grey;
+}
 
+.cart-button {
+    color: white;
+    background-color: #566c80 ;
+}
+
+.delete-btn{
+    width: 30px;
+    height: 30px;
 }
 
 

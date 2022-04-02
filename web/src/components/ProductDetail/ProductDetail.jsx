@@ -23,7 +23,7 @@ function ProductDetail() {
         return null;
     }
     const handleAdd = () => {
-        addProductToCart(id).then((productAdded) => {
+        addProductToCart(id).then(() => {
             navigate('/products')
         })
     }

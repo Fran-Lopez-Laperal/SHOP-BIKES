@@ -11,16 +11,19 @@ function Profile() {
 
   return (
     <div className="profile mb-5 mt-5 col-6 text-cente">
-      <div class="card">
-        <div class="card-header">
+      <div className="card">
+        <div className="card-header">
         </div>
-        <div class="card-body text-center">
-          <h5 class="card-title text-center">{user.name}</h5>
-          <p class="card-text">{user.email}</p>
+        <div className="card-body text-center">
+          <h5 className="card-title text-center">{user.name}</h5>
+          <p className="card-text">{user.email}</p>
           <p className="card-text">{user.adress}</p>
-          <button onClick={handleLogout} class="btn btn-danger">Cerrar Sesión</button>
+          <button onClick={handleLogout} className="btn btn-danger">Cerrar Sesión</button>
         </div>
-        <div class="card-footer text-muted">
+        <div>
+          
+        </div>
+        <div className="card-footer text-muted">
           {(user.role === 'admin') && (
             <div className="text-center">
               <hr />
