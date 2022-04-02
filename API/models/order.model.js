@@ -46,7 +46,7 @@ orderSchema.virtual('total').get(function () {
 })
 
 orderSchema.pre('findById', function (next) {
-    this.populate('products.product', 'name price state')
+    this.populate('products.product', 'name price state image')
     next()
 })
 

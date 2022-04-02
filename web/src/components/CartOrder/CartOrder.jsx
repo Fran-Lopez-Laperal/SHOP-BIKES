@@ -40,7 +40,7 @@ function CartOrder() {
         }, 5000);
     }
 
-
+    console.log(orders)
     if (!orders) {
         return false
     }
@@ -202,6 +202,7 @@ function CartOrder() {
 
                     )}
                     <hr />
+                    
                 </div>
 
             </div>
