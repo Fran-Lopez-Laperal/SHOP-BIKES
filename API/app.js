@@ -12,7 +12,7 @@ require('./config/db.config');
 const app = express();
 
 /**Middlewares */
-
+app.use(express.static('public'))
 // CORS config
 app.use((req, res, next) => {
     res.setHeader(
