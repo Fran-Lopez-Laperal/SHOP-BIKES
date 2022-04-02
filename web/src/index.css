@@ -4,5 +4,12 @@ a {
 }
 
 body{
-    background-color: rgba(128, 128, 128, 0.123);
+    /* background-color: rgba(128, 128, 128, 0.123); */
+    background-image: url(./assets/CarouselImages/bicis.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#root{
+    background: rgba(255 255 255 /50%);
 }

@@ -36,7 +36,7 @@ function Register() {
 
     return (
 
-        <div className="register mt-5 mb-5 p-5">
+        <div className="register mt-5 mb-5 p-5 border-3 rounded-3">
             <ul className="register-info w-50 p-5 ">
                 <li className="">
                     <h2>Requisitos para registrarse</h2>

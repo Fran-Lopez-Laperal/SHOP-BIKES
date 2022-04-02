@@ -12,6 +12,7 @@ import './App.css'
 import Home from "./pages/Home/Home";
 import Profile from "./components/Profile/Profile";
 import CartOrder from "./components/CartOrder/CartOrder";
+import Pay from "./components/Pay/Pay";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path='/profile' element={<Profile/>}/>
           <Route path='/shopping-cart' element={<ShoppingCart />} />
           <Route path='/shopping-cart/order' element={<CartOrder/>} />
+          <Route path="/pay" element={<Pay/>} />
         </Routes>
       </div>
       <Footer />

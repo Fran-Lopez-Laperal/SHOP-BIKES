@@ -7,10 +7,10 @@ function HomeCarousel() {
 
     return (
         <>
-            <div className='home-carousel mt-5'>
-                <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+            <div className='home-carousel mt-5 '>
+                <div id="carouselExampleControls" className="carousel slide " data-bs-ride="carousel">
 
-                    <div className="carousel-inner">
+                    <div className="carousel-inner rounded-3 border-3">
                         <div className="carousel-item active">
                             <img src={img1} className="d-block" alt={img1} />                    
                         </div>

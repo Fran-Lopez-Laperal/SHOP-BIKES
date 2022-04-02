@@ -1,28 +1,41 @@
 import React, { useEffect } from "react"
-import { getOrder } from "../../services/api-service"
+import { getOrder, getProducts } from "../../services/api-service"
 import { AuthContext } from '../../contexts/AuthContext';
 import './CartOrder.css'
 import img1 from '../../assets/pay-images/gls.png'
 import img2 from '../../assets/pay-images/mondial-relay.png'
 import img3 from '../../assets/pay-images/adyen_hpp_v4.png'
 import Loading from "../Loading/Loading";
+import { useNavigate } from "react-router";
 const number = '4323 2344 2344 2343'
 
 function CartOrder() {
 
     const [loading, setLoading] = React.useState(false)
     const [orders, setOrders] = React.useState(null)
+    const [products, setProducts] = React.useState(undefined)
+    const navigate = useNavigate()
+
     const { user } = React.useContext(AuthContext)
+
 
     useEffect(() => {
         getOrder().then((orders) => {
             setOrders(orders)
         })
+
+        getProducts().then((products) => {
+            setProducts(products)
+        })
     }, [])
+
+    console.log(products)
 
     const handleLoading = () => {
         setLoading(true);
         setTimeout(() => {
+            // todo: here
+            navigate('/pay')
             setLoading(false)
         }, 5000);
     }
@@ -52,7 +65,7 @@ function CartOrder() {
                         <h6>{user.name}</h6>
                         <small className="user-adress">{user.adress.slice(0, 12)}</small>
                         <small className="user-adress">{user.adress.slice(12, 50)}</small>
-                        <div className="d-flex mt-5">
+                        <div className="d-flex align-items-center mt-5">
                             <input type="checkbox" name="check" id="check" />
                             <h6 className="user-adress ms-1">Los datos de facturación y de envío son los mismos</h6>
                         </div>
@@ -63,7 +76,7 @@ function CartOrder() {
                         <h5><i className="fa fa-truck me-3 mb-5" aria-hidden="true"></i>Método de envío</h5>
 
                         <div className="delivery d-flex">
-                            <div className="delivery-gls">
+                            <div className="delivery-gls d-flex align-self-center">
                                 <input type="radio" name="post" />
                                 <img className="img1-order" src={img1} alt="" />
                             </div>
@@ -75,9 +88,9 @@ function CartOrder() {
 
                         <hr />
 
-                        <div className="delivery d-flex">
-                            <div className="delivery-mondial" >
-                                <input type="radio" name="post" />
+                        <div className="delivery d-flex p-1">
+                            <div className="delivery-mondial align-self-center d-flex" >
+                                <input className="align-self-center" type="radio" name="post" />
                                 <img src={img2} alt="" />
                             </div>
                             <div className="d-flex flex-column mt-1 ms-5">
@@ -125,17 +138,17 @@ function CartOrder() {
                         Resumen del pedido
                     </h5>
                     {orders.map(order =>
-                        <div>
-                            <div className="cart-order-total d-flex flex-colunm">
+                        <div className="">
+                            <div className="cart-order-total d-flex justify-content-between">
                                 <small className="w-75">Subtotal</small>
                                 <p className="">{order.total} €</p>
                             </div>
-                            <div className="d-flex flex-colunm">
+                            <div className="d-flex justify-content-between">
                                 <small className="w-75">Gastos de envío</small>
                                 <h6 className="">Gratis</h6>
                             </div>
 
-                            <div className=" d-flex flex-colunm border-2 rounded-3 align-self-center" id="cart-order" >
+                            <div className=" d-flex justify-content-between border-2 rounded-3 align-self-center" id="cart-order" >
                                 <h5 className="fw-bold w-75 mt-1">Total</h5>
                                 <h5 className="fw-bold mt-1">{order.total} €</h5>
                             </div>
@@ -158,19 +171,37 @@ function CartOrder() {
 
                     )}
                     <hr />
+                    <p className="fw-light"><i className="fa fa-shopping-cart me-3" aria-hidden="true"></i>
+                        Mis productos
+                    </p>
                     {orders.map(order =>
-                        order.products.map(product => (
-                            <div key={product.id}>
-                                <div>
-                                    <h1 className="border">{product.price}</h1>
-                                </div>
-                                <div>
-                                    {product.amount}
-                                </div>
-                            </div>
-                        ))
-                    )}
+                        order.products.map(product => {
+                            console.log(product)
+                            const fullProduct = products?.find(p => p.id === product.product)
+                            return (
+                                <div className="info-resume d-flex justify-content-between" key={product.id}>
+                                    <div className="d-flex  align-self-center">
+                                        <img src={fullProduct?.image} alt="" />
+                                    </div>
+                                    <div className="d-flex  align-self-center ">
+                                        <div className="info-resume-amount">
+                                            {product.amount}x
+                                        </div>
+                                        <div className="">
+                                            {fullProduct?.name}
+                                        </div>
+                                    </div>
 
+                                    <div className="d-flex  align-self-center">
+                                        <h5 className="fw-light">{product.price}€</h5>
+                                    </div>
+
+                                </div>
+                            )
+                        })
+
+                    )}
+                    <hr />
                 </div>
 
             </div>
@@ -180,23 +211,3 @@ function CartOrder() {
 }
 
 export default CartOrder
-
-// order.products.map(product => (
-//     <div key={product.id}>
-//         <div>
-//             <div>
-//             <small>Subtotal</small>
-//                 {product.}
-//             </div>
-//             <div>
-//                 {product.amount}
-//             </div>
-//         </div>
-//     </div>
-// ))
-
-
-// <div>
-// <h5><i className="fa fa-shopping-cart me-3" aria-hidden="true"></i>Mis productos</h5>
-
-// </div>

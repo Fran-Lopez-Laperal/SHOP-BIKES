@@ -28,7 +28,7 @@ function ShoppingCart() {
     }
 
     return (
-        <div className="shopping-cart d-flex flex-column">
+        <div className="shopping-cart d-flex flex-column mb-5">
             <thead className="cart-head">
                 <strong>Descripción del artículo</strong>
             </thead>
@@ -48,7 +48,7 @@ function ShoppingCart() {
                         <div className="ms-5 cart-info flex-grow-1">
                             <h4>{cart.product.name}</h4>
                             <small className="moment">
-                                {moment().format('MMMM Do YYYY')}
+                                {moment().add(6, 'days').calendar()}
                             </small>
                         </div>
 

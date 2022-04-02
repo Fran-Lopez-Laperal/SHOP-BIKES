@@ -1,7 +1,7 @@
 .register{
     display: flex;
     justify-content: space-between;
-    background-color: rgba(211, 211, 211, 0.137);
+    background-color: white;
 }
 
 .register .register-info{

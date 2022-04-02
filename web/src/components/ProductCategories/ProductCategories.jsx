@@ -11,7 +11,7 @@ function ProductCategories() {
 
 
     return (
-        <div className='product-category d-flex justify-content-center mb-5'>
+        <div className='product-category d-flex justify-content-center mb-5 rounded-3 border-3'>
             <div className='category-group mt-5 mb-5'>
                 <Link to="/products?category=bike">
                     <div className='bike-category mb-5' id='box'>
