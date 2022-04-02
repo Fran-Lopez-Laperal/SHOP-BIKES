@@ -1,0 +1,10 @@
+#!/bin/bash
+
+rm -rf API/public/*
+cd web
+npm run build
+mv build/* ../API/public
+cd ..
+git add .
+git commit -m 'new web'
+git subtree push --prefix API heroku master
