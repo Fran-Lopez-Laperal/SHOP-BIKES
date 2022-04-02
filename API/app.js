@@ -21,6 +21,7 @@ app.use((req, res, next) => {
     );
     res.setHeader("Access-Control-Allow-Headers", "Content-Type");
     res.setHeader("Access-Control-Allow-Credentials", "true");
+    //configuracion de las cabecereas de las peticiones del service.
     res.setHeader("Access-Control-Allow-Methods", "GET,PUT,POST,DELETE,PATCH");
 
     if (req.method === "OPTIONS") {
