@@ -157,6 +157,7 @@ function CartOrder() {
                                         <i className="fa fa-cart-arrow-down me-5" aria-hidden="true"></i>
                                         Realizar pedido
                                     </button>
+                                   
                                 }
 
 
