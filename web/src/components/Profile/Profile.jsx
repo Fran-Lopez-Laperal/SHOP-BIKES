@@ -9,6 +9,8 @@ function Profile() {
 
   const { handleLogout, user } = React.useContext(AuthContext)
 
+
+
   return (
     <div className="profile mb-5 mt-5 col-6 text-cente">
       <div className="card">
@@ -21,7 +23,7 @@ function Profile() {
           <button onClick={handleLogout} className="btn btn-danger">Cerrar Sesión</button>
         </div>
         <div>
-          
+          <button></button>
         </div>
         <div className="card-footer text-muted">
           {(user.role === 'admin') && (

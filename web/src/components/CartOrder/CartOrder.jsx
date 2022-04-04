@@ -176,7 +176,7 @@ function CartOrder() {
                     </p>
                     {orders.map(order =>
                         order.products.map(product => {
-                            console.log(product)
+                           
                             const fullProduct = products?.find(p => p.id === product.product)
                             return (
                                 <div className="info-resume d-flex justify-content-between" key={product.id}>
