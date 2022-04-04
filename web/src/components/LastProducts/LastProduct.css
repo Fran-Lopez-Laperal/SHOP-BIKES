@@ -1,0 +1,12 @@
+.last-product h4{
+    text-decoration:underline;
+}
+
+.last-product-card{
+    background-color: white;
+  
+}
+
+.last-product-card img {
+ height: 90px;
+}
