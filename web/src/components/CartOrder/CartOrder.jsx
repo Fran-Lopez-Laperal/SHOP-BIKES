@@ -1,5 +1,5 @@
 import React, { useEffect } from "react"
-import { getOrder, getProducts } from "../../services/api-service"
+import { getOrder } from "../../services/api-service"
 import { AuthContext } from '../../contexts/AuthContext';
 import './CartOrder.css'
 import img1 from '../../assets/pay-images/gls.png'
@@ -13,7 +13,7 @@ function CartOrder() {
 
     const [loading, setLoading] = React.useState(false)
     const [orders, setOrders] = React.useState(null)
-    const [products, setProducts] = React.useState(undefined)
+
     const navigate = useNavigate()
 
     const { user } = React.useContext(AuthContext)
@@ -24,12 +24,8 @@ function CartOrder() {
             setOrders(orders)
         })
 
-        getProducts().then((products) => {
-            setProducts(products)
-        })
-    }, [])
 
-    console.log(products)
+    }, [])
 
     const handleLoading = () => {
         setLoading(true);
@@ -175,25 +171,24 @@ function CartOrder() {
                         Mis productos
                     </p>
                     {orders.map(order =>
-                        order.products.map(product => {
-                           
-                            const fullProduct = products?.find(p => p.id === product.product)
+                        order.products.map(orderProduct => {
+
                             return (
-                                <div className="info-resume d-flex justify-content-between" key={product.id}>
+                                <div className="info-resume d-flex justify-content-between" key={orderProduct.product.id}>
                                     <div className="d-flex  align-self-center">
-                                        <img src={fullProduct?.image} alt="" />
+                                        <img src={orderProduct.product.image} alt="" />
                                     </div>
                                     <div className="d-flex  align-self-center ">
                                         <div className="info-resume-amount">
-                                            {product.amount}x
+                                            {orderProduct.amount}x
                                         </div>
                                         <div className="">
-                                            {fullProduct?.name}
+                                            {orderProduct.product.name}
                                         </div>
                                     </div>
 
                                     <div className="d-flex  align-self-center">
-                                        <h5 className="fw-light">{product.price}€</h5>
+                                        <h5 className="fw-light">{orderProduct.price}€</h5>
                                     </div>
 
                                 </div>
@@ -202,7 +197,7 @@ function CartOrder() {
 
                     )}
                     <hr />
-                    
+
                 </div>
 
             </div>

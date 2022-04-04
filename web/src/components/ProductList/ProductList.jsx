@@ -19,7 +19,6 @@ function ProductList() {
 
         getProducts(category, name)
             .then((products) => {
-                console.log('api', products)
                 setProducts(products)
             })
     }, [search])
