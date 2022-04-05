@@ -10,7 +10,6 @@ function Loading () {
                     <h2 className='fw-light'>Procesando pago...</h2>
                 </div>
             </div>
-       
     )
 }
 

@@ -37,7 +37,6 @@ module.exports.order = (req, res, next) => {
                             product: cardItem.product.id,
                             amount: cardItem.amount,
                             price: cardItem.product.price,
-                            image: cardItem.product.image
                         }
                     }),
                     owner: req.user.id,

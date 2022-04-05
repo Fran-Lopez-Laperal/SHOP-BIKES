@@ -42,13 +42,13 @@ function Register() {
                     <h2>Requisitos para registrarse</h2>
                 </li>
                 <li>
-                    <small><i class="fa fa-check" aria-hidden="true"></i> Introducir un e-mail que ya no se haya utilizado anteriormente</small>
+                    <small><i className="fa fa-check" aria-hidden="true"></i> Introducir un e-mail que ya no se haya utilizado anteriormente</small>
                 </li>
                 <li>
-                    <small><i class="fa fa-check" aria-hidden="true"></i>Introducir una contraseña de al menos 9 caracteres sin espacios</small>
+                    <small><i className="fa fa-check" aria-hidden="true"></i>Introducir una contraseña de al menos 9 caracteres sin espacios</small>
                 </li>
                 <li>
-                    <small><i class="fa fa-check" aria-hidden="true"></i>Introducir tu nombre</small>
+                    <small><i className="fa fa-check" aria-hidden="true"></i>Introducir tu nombre</small>
                 </li>
 
             </ul>

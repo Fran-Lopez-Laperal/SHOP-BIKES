@@ -46,5 +46,4 @@ function ProductCategories() {
     )
 }
 
-
 export default ProductCategories

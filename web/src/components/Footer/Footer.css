@@ -1,11 +1,13 @@
 .footer {
-    height: 100px;
-    background: -webkit-radial-gradient(center center, circle, #818d97, #2a4a68);
+    height: 130px;
+    background: -webkit-radial-gradient(center center, circle, #b3bbc2, #80a0be);
     list-style: none;
     position:static;
     bottom: 0;
     min-height: 70px;
     width: 100%;
+    color: black;
+    text-decoration-color: none;
 }
 
 .footer ul{

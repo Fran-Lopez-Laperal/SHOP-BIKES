@@ -20,9 +20,6 @@ http.interceptors.response.use(
   }
 );
 
-
-
-
 export function getProducts(category, name) {
 
   return http.get('api/products', { params: { category, name } })
@@ -99,10 +96,10 @@ export function upsertCart(cart) {
 }
 
 
-export function order(){
-  return http.post('/api/shopping-cart/order')
+export function order(order) {
+  return http.post('/api/shopping-cart/order', order)
 }
 
-export function getOrder () {
+export function getOrder() {
   return http.get('/api/orders')
 }

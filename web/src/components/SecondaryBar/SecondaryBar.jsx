@@ -5,16 +5,12 @@ function Secondarybar() {
     const navigate = useNavigate()
 
     function handleSearch(e) {
-
         const { search } = e.target.elements
         e.preventDefault()
         navigate(`/products?name=${search.value}`)
-
     }
 
     return (
-
-
         <div className='secondary-bar mt-2'>
              <div className='form-search'>
           <form onSubmit={handleSearch} className="d-flex p-2 secondary-form mt-3 ">

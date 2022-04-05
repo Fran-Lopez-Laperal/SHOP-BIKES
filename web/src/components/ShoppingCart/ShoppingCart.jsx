@@ -8,7 +8,7 @@ function ShoppingCart() {
 
     const navigate = useNavigate()
     const [cart, setCart] = useState(undefined)
-    const [product, setProduct] = useState(undefined)
+    // const [product, setProduct] = useState(undefined)
 
 
     useEffect(() => {
@@ -73,18 +73,17 @@ function ShoppingCart() {
 
 
                 ))}
+
                 <hr />
 
                 <div className="bg-light d-flex flex-row align-items-center rounded-3 p-3">
                     <div className="flex-grow-1 ">
                         <small className="ms-5">IVA incl.</small>
                     </div>
-
                     <small className="p-5">Total compra</small>
                     <small className="px-2" style={{ color: 'black' }}>{cart.total}€</small>
-
                 </div>
-
+                
                 <div className="d-flex align-self-end mt-4 mb-4 justify-content-end rounded-3">
                     <Link to='/shopping-cart/order' className="btn btn-danger">
                         <i className="fa fa-shopping-cart me-3" onClick={handleOrder}></i> Realizar pedido

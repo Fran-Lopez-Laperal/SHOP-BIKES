@@ -4,15 +4,9 @@ import './Login.css'
 import { Navigate, useNavigate, } from "react-router";
 import { AuthContext } from "../../contexts/AuthContext";
 import { login } from "../../services/api-service"
-// import { GoogleLogin } from 'react-google-login';
 
 
 function Login() {
-
-    // const responseGoogle = (response) => {
-    //     console.log(response)
-    // }
-   
 
     const [data, setData] = React.useState({
         email: '',
@@ -89,9 +83,7 @@ function Login() {
 
             </form>
         </div>
-
     )
-
 }
 
 export default Login

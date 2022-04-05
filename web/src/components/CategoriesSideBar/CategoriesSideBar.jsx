@@ -1,11 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-
-
 import './CategoriesSideBar.css'
-function CategoriesSideBar() {
 
+
+function CategoriesSideBar() {
 
     return (
 
@@ -18,6 +16,7 @@ function CategoriesSideBar() {
                         Bicicletas
                     </li>
                 </Link>
+
                 <Link to="/products?category=electronic">
                     <li className="side-text mb-2">
                         <i className="icon me-2 fa fa-bluetooth-b fa-fw" aria-hidden="true"></i>
@@ -38,12 +37,8 @@ function CategoriesSideBar() {
                         Ropa
                     </li>
                 </Link>
-
             </ul>
-           
-
         </div>
-
     )
 }
 

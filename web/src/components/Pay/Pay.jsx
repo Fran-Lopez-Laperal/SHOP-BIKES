@@ -21,7 +21,8 @@ function Pay() {
     }
 
     return (
-        <div className='pay mt-5 mb-5 d-flex align-items-center'>
+        <div className='pay mt-5 mb-5 d-flex flex-column align-items-center p-5'>
+            <h5 className='mt-5 mb-5 text-danger'><i className='fa fa-shopping-cart'></i> COMPRA REALIZADA CON ÉXITO</h5>
             {orders.map(order =>
                 <div key={order.id} className='pay-info ms-5'>
                     <div className='d-flex justify-content-between'>
@@ -48,6 +49,7 @@ function Pay() {
                     </div>
 
                 </div>
+
             )}
         </div>
     )

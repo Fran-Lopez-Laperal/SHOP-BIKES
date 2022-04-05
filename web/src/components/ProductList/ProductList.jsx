@@ -27,8 +27,6 @@ function ProductList() {
         return null
     }
 
-
-
     return (
         <div className='item-body  col-2 mt-3'>
             {products.map(product => (

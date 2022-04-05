@@ -8,15 +8,6 @@ import { AuthContext } from '../../contexts/AuthContext';
 
 function NavBar() {
   const { user } = React.useContext(AuthContext)
-  // const navigate = useNavigate
-  // function handleSearch(e) {
-
-  //   const { search } = e.target.elements
-  //   e.preventDefault()
-  //   navigate(`/products?name=${search.value}`)
-
-  // }
-
 
   return (
 
@@ -58,8 +49,6 @@ function NavBar() {
                     </Link>
                   </div>
                 </div>
-
-
               )
                 :
                 <div className='profile-div d-flex '>
@@ -81,11 +70,8 @@ function NavBar() {
             }
           </div>
         </div>
-        
-
       </nav>
     </>
-
   )
 }
 

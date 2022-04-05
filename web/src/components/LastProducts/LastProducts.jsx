@@ -18,7 +18,6 @@ function LastProducts() {
         return null
     }
 
-
     return (
         <div className="last-product p-5 mt-5 text-center">
             <h4 className="text-danger">Novedades</h4>
