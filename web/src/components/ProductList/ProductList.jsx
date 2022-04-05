@@ -30,7 +30,7 @@ function ProductList() {
 
 
     return (
-        <div className='item-body  col-2' >
+        <div className='item-body  col-2 mt-3'>
             {products.map(product => (
 
                 <div className="card shadow p-1 mt-5 ms-4 mb-5" style={{ width: '16rem' }} key={product.id}>

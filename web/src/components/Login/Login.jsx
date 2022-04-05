@@ -51,21 +51,9 @@ function Login() {
 
 
     return (
-        <div className="login col-4 mb-5 mt-5 p-2 ">
-            {/* <div className="google-login">
-                <GoogleLogin
-                    clientId="965233685400-557b783as366slo7np8komi38h0al799.apps.googleusercontent.com"
-                    buttonText="Login"
-                    onSuccess={responseGoogle}
-                    isSignedIn = { true } 
-                    onFailure={responseGoogle}
-                    cookiePolicy={'single_host_origin'}
-                />
-                
-            </div> */}
-
-
-            <h3>Iniciar de Sesión</h3>
+        <div className="login col-4 mb-5 mt-5 p-2 border rounded-3 p-5">
+          
+            <h3 className="text-center mb-5 mt-3">Iniciar de Sesión</h3>
             <form className="" onSubmit={handleSubmit} >
 
                 <div className="mb-3">

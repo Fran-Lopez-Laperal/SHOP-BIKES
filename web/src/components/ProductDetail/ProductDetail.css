@@ -32,4 +32,8 @@
     border-left: none;
     border-bottom: none;
     border-top: none;
+    min-width: auto;
+}
+.card-div{
+   height: 500px;
 }

@@ -9,9 +9,9 @@ function CategoriesSideBar() {
 
     return (
 
-        <div>
+        <div className="d-flex justify-content-center mt-5">
 
-            <ul className="side-bar unstylled-list pt-5">
+            <ul className="side-bar unstylled-list">
                 <Link to="/products?category=bicis">
                     <li className="side-text mb-2">
                         <i className="icon me-2 fa fa-bicycle fa-fw"></i>

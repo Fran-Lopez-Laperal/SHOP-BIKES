@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { deleteProduct, getCart, order } from "../../services/api-service"
+import { getCart, order } from "../../services/api-service"
 import moment from "moment"
 import './ShoppingCart.css'
 import { Link, useNavigate } from "react-router-dom"
@@ -21,11 +21,11 @@ function ShoppingCart() {
         return null
     }
 
-    function handleDelete() {
-        deleteProduct(product.id).then(() => {
-            navigate('/shopping-cart')
-        })
-    }
+    // function handleDelete() {
+    //     deleteProduct(product.id).then(() => {
+    //         navigate('/shopping-cart')
+    //     })
+    // }
 
 
     function handleOrder() {
@@ -65,9 +65,9 @@ function ShoppingCart() {
                             </div>
 
                         </div>
-                        <div className="d-flex justify-content-end">
+                        {/* <div className="d-flex justify-content-end">
                             <button className="d-flex justify-content-center delete-btn btn btn-danger" onClick={handleDelete}><i className="fa fa-trash"></i></button>
-                        </div>
+                        </div> */}
 
                     </div>
 

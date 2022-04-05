@@ -17,7 +17,7 @@ import Pay from "./components/Pay/Pay";
 
 function App() {
   return (
-    <div className="app">
+    <div className="app ">
       <NavBar />
 
       <div className="container">

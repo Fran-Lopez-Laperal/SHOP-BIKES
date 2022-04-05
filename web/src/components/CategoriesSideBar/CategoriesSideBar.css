@@ -1,11 +1,6 @@
 .side-bar {
-    border: solid 1px rgb(219, 219, 219);
-    border-left: none;
-    border-top: none;
-    border-bottom: none;
-    border: right;
-    width: 200px;
-    height: auto;
+    width: 300px;
+    height: 100px;
     padding: 10px;
 }
 

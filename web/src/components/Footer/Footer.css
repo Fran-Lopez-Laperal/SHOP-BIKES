@@ -1,9 +1,11 @@
 .footer {
     height: 100px;
-    width: auto;
     background: -webkit-radial-gradient(center center, circle, #818d97, #2a4a68);
     list-style: none;
-
+    position:static;
+    bottom: 0;
+    min-height: 70px;
+    width: 100%;
 }
 
 .footer ul{
