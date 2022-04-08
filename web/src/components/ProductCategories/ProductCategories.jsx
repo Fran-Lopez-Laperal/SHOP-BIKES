@@ -20,7 +20,7 @@ function ProductCategories() {
                     </div>
                 </Link>
 
-                <Link to="/products?category=accesory">
+                <Link to="/products?category=components">
                     <div className='accesory-category' id='box'>
                         <img src={accesoryImage} alt={accesoryImage} />
                         <p>COMPONENTES</p>
@@ -29,7 +29,7 @@ function ProductCategories() {
             </div>
 
             <div className='category-group mt-5 mb-5'>
-                <Link to="/products?category=elctronic">
+                <Link to="/products?category=electronic">
                     <div className='electronic-category mb-5' id='box'>
                         <img src={electronicImage} alt={electronicImage} />
                         <p>ELECTRONICA</p>

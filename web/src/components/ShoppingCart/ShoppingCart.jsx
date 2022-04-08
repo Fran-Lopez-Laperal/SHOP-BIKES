@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getCart, order } from "../../services/api-service"
+import { getCart, addOrder } from "../../services/api-service"
 import moment from "moment"
 import './ShoppingCart.css'
 import { Link, useNavigate } from "react-router-dom"
@@ -28,9 +28,9 @@ function ShoppingCart() {
     // }
 
 
-    function handleOrder() {
-        order().then(() => {
-            navigate('/orders')
+    function handleOrder(order) {
+        addOrder(order).then(() => {
+            navigate('')
         })
     }
 
@@ -86,7 +86,7 @@ function ShoppingCart() {
                 
                 <div className="d-flex align-self-end mt-4 mb-4 justify-content-end rounded-3">
                     <Link to='/shopping-cart/order' className="btn btn-danger">
-                        <i className="fa fa-shopping-cart me-3" onClick={handleOrder}></i> Realizar pedido
+                        <i className="fa fa-shopping-cart me-3" onClick={handleOrder()}></i> Realizar pedido
                     </Link>
                 </div>
             </div>
