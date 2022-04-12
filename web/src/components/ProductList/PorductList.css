@@ -1,6 +1,6 @@
-/* .card{
+ /* .card{
      border-right: none;
-} */
+}  */
 .card-body{
     margin-top: 10px;
 }
@@ -21,9 +21,9 @@
 }
 
 
-.item-body{
+/* .item-body{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-}
+}  */
 
 
