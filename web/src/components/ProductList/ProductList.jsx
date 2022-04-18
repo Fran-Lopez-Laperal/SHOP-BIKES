@@ -32,7 +32,7 @@ function ProductList() {
             {products.map(product => (
 
                 <div className="card shadow p-1 mt-5 ms-4 mb-5 col-xl-4 col-md-4 col-sm-6 col-xs-12" style={{ width: '16rem' }} key={product.id}>
-                    <Link to={`/products/${product.id}`}>
+                    <Link to={`/products/${product.id}`}  style={{textDecoration:"none"}}>
                         <div className='inner'>
                             <img src={product.image} className="card-img-top mt-2 p-3" alt={product.name} />
                         </div>

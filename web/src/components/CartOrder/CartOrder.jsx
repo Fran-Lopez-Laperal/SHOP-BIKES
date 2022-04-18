@@ -20,11 +20,10 @@ function CartOrder() {
 
 
     useEffect(() => {
-        getOrder().then((orders) => {
-            setOrders(orders)
-        })
-
-
+        getOrder()
+            .then((orders) => {
+                setOrders(orders)
+            })
     }, [])
 
     const handleLoading = () => {
@@ -157,7 +156,7 @@ function CartOrder() {
                                         <i className="fa fa-cart-arrow-down me-5" aria-hidden="true"></i>
                                         Realizar pedido
                                     </button>
-                                   
+
                                 }
 
 
