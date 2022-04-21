@@ -47,7 +47,8 @@
 
 @media(max-width:1024px){
     .cart-info{
-        flex-direction: 
+        flex-direction: column-reverse;
+        flex-wrap:wrap ;
     }
 }
 
