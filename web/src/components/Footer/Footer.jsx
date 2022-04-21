@@ -5,10 +5,10 @@ import React from "react";
 function Footer() {
     return (
         <footer className='footer'>
-            <div className='d-flex justify-content-between px-5'>
-                <div className='mt-3 ms-5'>
+            <div className='footer-div d-flex justify-content-between px-5'>
+                <div className='footer-ul footer-table  mt-3 '>
                
-                    <ul className='footer-table'>
+                    <ul className='footer-table-media'>
                         <li className='fw-bold mb-2'>Sobre nosotros
                         </li>
                         <Link to='#'>
@@ -32,7 +32,7 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div className='mt-3'>
+                <div className='footer-ul mt-3'>
                     <ul className='footer-table'>
                         <li className='fw-bold mb-2'>Grantías</li>
                         <Link to='#'>
@@ -53,7 +53,7 @@ function Footer() {
                     </ul>
                 </div>
 
-                <div className='mt-3 me-5'>
+                <div className='footer-ul mt-3 me-5'>
                     <ul className='footer-table'>
                         <li className='fw-bold mb-2'>Atencion al cliente</li>
                         <Link to='#'>

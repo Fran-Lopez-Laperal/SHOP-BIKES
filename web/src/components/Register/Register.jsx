@@ -31,7 +31,6 @@ function Register() {
             .catch((error) => {
                 setError(error.response.data.message)
             })
-
     }
 
     return (

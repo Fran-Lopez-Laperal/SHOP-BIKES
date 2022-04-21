@@ -33,6 +33,10 @@ const userSchema = new Schema({
         type: String,
         required: 'Direction adress is required',
     },
+    avatar: {
+        type: String
+    },
+
     role: {
         type: String,
         enum: ['admin', 'guess'],

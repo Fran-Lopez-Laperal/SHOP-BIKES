@@ -5,6 +5,7 @@ const products = require('../controllers/products.controller');
 const auth = require('../controllers/auth.controller')
 const cart = require("../controllers/shoppingCart.controller")
 const order = require('../controllers/orders.controller')
+const upload = require('../config/multer.config')
 const secure = require('../middlewares/mid.secure')
 
 router.get("/products", products.list);
@@ -17,6 +18,9 @@ router.post("/register", auth.register);
 router.post("/login", auth.login);
 router.post("/logout", secure.isAuthenticated, auth.logout)
 router.get("/profile", secure.isAuthenticated, auth.profile)
+
+// router.get("/authenticate/google", auth.loginWithGoogle)
+// router.get("/authenticate/google/cb", auth.doLoginWithGoogle)
 
 router.put("/shopping-cart", secure.isAuthenticated, cart.upsert)
 router.get("/shopping-cart", secure.isAuthenticated, cart.detail)

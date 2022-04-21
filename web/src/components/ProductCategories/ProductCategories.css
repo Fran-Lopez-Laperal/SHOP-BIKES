@@ -8,6 +8,8 @@
     object-fit: cover;
 }
 
+
+
 .product-category p {
     margin-top: -28px;
     text-align: center;
@@ -30,4 +32,29 @@
 
 #box:hover{
     box-shadow: 0 0 10px #1d1c1c;
+}
+
+@media(max-width:1024px){
+    .product-category{
+        flex-wrap: wrap-reverse;
+    }
+}
+
+@media(max-width:1024px){
+    .product-category img {
+        flex-wrap: wrap-reverse;
+        height: 150px;
+        width: 320px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+}
+
+@media(max-width:1024px){
+    .product-category p {
+        margin-top: -38px;
+        text-align: center;
+        color: white;
+    }
 }

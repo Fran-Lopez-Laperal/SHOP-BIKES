@@ -23,13 +23,32 @@
     width: 30px;
 }
 
-@media (max-width:992px) {
+@media (max-width:1024px) {
     .footer {
-        width: 100%;
-        grid-template-columns: repeat(1, 1fr);
-        grid-gap: 30px;
-        padding: 50px;
-        background: -webkit-radial-gradient(center center, circle, #b3bbc2, #80a0be);
+        width: auto;
+        height: auto;
+    }
+
+}
+
+@media (max-width:1024px) {
+    .footer-div {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+
+}
+
+@media (max-width:1024px) {
+    .footer-ul {
+      text-align: start;
+    }
+
+}
+
+@media (max-width:1024px) {
+    .footer-table {
+    text-align: start;
     }
 
 }

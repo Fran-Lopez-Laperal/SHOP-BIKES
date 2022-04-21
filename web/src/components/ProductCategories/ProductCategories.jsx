@@ -11,37 +11,36 @@ function ProductCategories() {
 
 
     return (
-        <div className='product-category d-flex justify-content-center mb-5 rounded-3 border-3'>
-            <div className='category-group mt-5 mb-5'>
+        <div className='product-category d-flex flex-wrap  justify-content-center mb-5 rounded-3 border-3'>
+           
                 <Link to="/products?category=bicis">
-                    <div className='bike-category mb-5' id='box'>
+                    <div className='category rounded-3' id='box'>
                         <img src={bikeImage} alt={bikeImage} />
                         <p>BICICLETAS</p>
                     </div>
                 </Link>
 
                 <Link to="/products?category=components">
-                    <div className='accesory-category' id='box'>
+                    <div className='category rounded-3' id='box'>
                         <img src={accesoryImage} alt={accesoryImage} />
                         <p>COMPONENTES</p>
                     </div>
                 </Link>
-            </div>
+        
 
-            <div className='category-group mt-5 mb-5'>
+            
                 <Link to="/products?category=electronic">
-                    <div className='electronic-category mb-5' id='box'>
+                    <div className='category   rounded-3' id='box'>
                         <img src={electronicImage} alt={electronicImage} />
                         <p>ELECTRONICA</p>
                     </div>
                 </Link>
                 <Link to="/products?category=clothes">
-                    <div className='clothes-category' id='box'>
+                    <div className='category rounded-3' id='box'>
                         <img src={clothesImage} alt={clothesImage} />
                         <p>ROPA</p>
                     </div>
                 </Link>
-            </div>
         </div>
     )
 }

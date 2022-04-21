@@ -80,6 +80,9 @@ function Login() {
                 <button type="submit" className="btn btn-primary col-12">
                     Login
                 </button>
+                <div>
+                    <a href="http://localhost:3001/api/authenticate/google">Google Login</a>
+                </div>
 
             </form>
         </div>
