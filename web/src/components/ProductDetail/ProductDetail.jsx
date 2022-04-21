@@ -56,7 +56,7 @@ function ProductDetail() {
                                 <p className='product-price card-text' style={{ color: 'red' }}>{product.price}€</p>
                                 <p className="card-text">{product.description}</p>
                                 <p className="card-text"><strong>Category: </strong><small className="text-muted">{product.category}</small></p>
-                                <button className='btn btn-success' onClick={handleAdd}>Add to Cart</button>
+                                <button className='btn btn-success' onClick={handleAdd}>Añadir al carrito</button>
                             </div>
                         </div>
                     </div>
