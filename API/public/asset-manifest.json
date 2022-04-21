@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.ea8dbe2f.css",
-    "main.js": "/static/js/main.1f58a4e0.js",
+    "main.css": "/static/css/main.0ef47af0.css",
+    "main.js": "/static/js/main.64448ca9.js",
     "static/media/sram_x01_eagle_2021_accion_1.jpeg": "/static/media/sram_x01_eagle_2021_accion_1.ca9076897f9f760def65.jpeg",
     "static/media/Captura de Pantalla 2022-03-22 a las 18.43.23.png": "/static/media/Captura de Pantalla 2022-03-22 a las 18.43.23.b3bd709845a4873e4caa.png",
     "static/media/bicis.jpeg": "/static/media/bicis.6ce36e60cac69bee15d5.jpeg",
@@ -10,11 +10,11 @@
     "static/media/nueva-scott-spark-2022-20.jpeg": "/static/media/nueva-scott-spark-2022-20.0fa205a166efc1ef6fe0.jpeg",
     "static/media/ASSOS-action1-600x400-1.jpeg": "/static/media/ASSOS-action1-600x400-1.ff486fd6e282fbd95134.jpeg",
     "index.html": "/index.html",
-    "main.ea8dbe2f.css.map": "/static/css/main.ea8dbe2f.css.map",
-    "main.1f58a4e0.js.map": "/static/js/main.1f58a4e0.js.map"
+    "main.0ef47af0.css.map": "/static/css/main.0ef47af0.css.map",
+    "main.64448ca9.js.map": "/static/js/main.64448ca9.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea8dbe2f.css",
-    "static/js/main.1f58a4e0.js"
+    "static/css/main.0ef47af0.css",
+    "static/js/main.64448ca9.js"
   ]
 }

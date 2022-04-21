@@ -1,7 +1,6 @@
 .secondary-bar {
   width: auto;
   height: 75px;
-  background: -webkit-radial-gradient(center center, circle, #5d6c79, #1162ac);
   justify-items: center;
   background-image: url(../../assets/CarouselImages/sram_x01_eagle_2021_accion_1.jpeg);
   background-repeat: no-repeat;
@@ -13,6 +12,14 @@
   margin-left: 320px;
   position: relative;
   float: right;
+}
+
+@media(max-width:1024px){
+  .secondary-form{
+    margin-right: 150px;
+    width: 400px;
+    
+  }
 }
 
 .inner p {

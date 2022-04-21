@@ -13,3 +13,9 @@ body{
 #root{
     background: rgba(255 255 255 /50%);
 }
+
+@media(max-width:390px){
+    #root{
+        width:410px;
+    }   
+}
