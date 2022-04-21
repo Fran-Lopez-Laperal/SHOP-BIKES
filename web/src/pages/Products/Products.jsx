@@ -10,12 +10,14 @@ function Products() {
     return (
         <div className="products d-flex ms-2">
 
-            <div className="side-bar-products me-2 border">
+            <div className="side-bar-products">
                 <CategoriesSideBar />
-                <LastProducts/>
+                <div className="last-products">
+                    <LastProducts />
+                </div>
             </div>
 
-            <div className="side-products">
+            <div className="side-products align-items-center">
                 <ProductList />
             </div>
 

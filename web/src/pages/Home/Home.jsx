@@ -7,7 +7,7 @@ import HomeCarousel from '../../components/HomeCarousel/HomeCarousel'
 function Home() {
 
     return (
-        <div>
+        <div className='home'>
             <HomeCarousel />
             <ProductCategories />
         </div>
