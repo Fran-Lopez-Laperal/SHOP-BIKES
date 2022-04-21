@@ -32,3 +32,8 @@
         width: 380px;
     }
 }
+@media(max-width:1024px){
+    .product-image{
+        padding: 5px;
+    }
+}

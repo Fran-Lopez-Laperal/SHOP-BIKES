@@ -36,7 +36,10 @@ function ShoppingCart() {
 
     return (
         <div className="shopping-cart d-flex flex-column mb-5">
-            <Link to="/products" className="btn cart-button success col-2 mt-5">Seguir comprando</Link>
+        <div>
+        <Link to="/products" className="btn btn-back cart-button success col-2 mt-5">Seguir comprando</Link>
+        </div>
+            
             <h4 className="cart-head mt-5">
                 <strong>Descripción del artículo</strong>
             </h4>
@@ -49,11 +52,11 @@ function ShoppingCart() {
 
                         <div className="d-flex flex-row cart-info">
 
-
+                        
                             <img className="cart-image" src={cart.product.image} alt={cart.product.name} />
 
 
-                            <div className="ms-5 cart-info flex-grow-1">
+                            <div className="ms-5 cart-info ">
                                 <h4>{cart.product.name}</h4>
                                 <small className="moment">
                                     Fecha de entrega estimada: <strong className="ms-3">{moment().add(6, 'days').calendar()}</strong>
