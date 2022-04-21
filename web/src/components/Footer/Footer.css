@@ -28,7 +28,6 @@
         width: auto;
         height: auto;
     }
-
 }
 
 @media (max-width:1024px) {
@@ -36,19 +35,16 @@
       flex-wrap: wrap;
       text-align: center;
     }
-
 }
 
 @media (max-width:1024px) {
     .footer-ul {
       text-align: start;
     }
-
 }
 
 @media (max-width:1024px) {
     .footer-table {
     text-align: start;
     }
-
 }

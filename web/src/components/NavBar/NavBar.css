@@ -33,3 +33,16 @@
 .form-search{
     margin-left: 400px;
 }
+
+
+@media(max-width:1024px){
+    .div-cart{
+     width: 20px;
+    }
+}
+
+@media(max-width:1024px){
+    .div-cart i{
+     width: 20px;
+    }
+}
