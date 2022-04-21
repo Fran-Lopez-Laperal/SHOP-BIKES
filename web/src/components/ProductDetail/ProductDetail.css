@@ -24,16 +24,11 @@
 
 .product-price{
     margin-left:200px;
-    font-weight: 600;
+    font-weight: 600px;
 }
 
-.card{
-    margin-top:-15px;
-    border-left: none;
-    border-bottom: none;
-    border-top: none;
-    min-width: auto;
-}
-.card-div{
-   height: 500px;
+@media(max-width:1024px){
+    .card{
+        width: 380px;
+    }
 }
