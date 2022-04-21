@@ -34,15 +34,12 @@
     margin-left: 400px;
 }
 
-
-@media(max-width:1024px){
-    .div-cart{
-     width: 20px;
-    }
+.span{
+    background-color: #425ec0;
 }
 
 @media(max-width:1024px){
-    .div-cart i{
-     width: 20px;
+    .div-cart{
+     width: 10px;
     }
 }
