@@ -24,6 +24,7 @@ function CartOrder() {
             .then((orders) => {
                 setOrders(orders)
             })
+
     }, [])
 
     const handleLoading = () => {
@@ -49,24 +50,26 @@ function CartOrder() {
     return (
         <>
 
-            <div className="d-flex mt-5 mb-5">
-                <div className="info-user-order w-75" >
+            <div className="main-order mt-5 mb-5">
+                <div className="info-user-order" >
                     <div className="info-order-user p-5 border rounded-3 mb-3 d-flex flex-column" id="group">
-                        <h5 className="mb-5">
+                        <div className="d-flex">
                             <i className="fa fa-user-o me-3" aria-hidden="true"></i>
-                            Datos de contacto y envío
+                            <h5 className="mb-5">
+                                Datos de contacto y envío
+                            </h5>
                             <i className="fa fa-check-circle-o ms-3" aria-hidden="true"></i>
-                        </h5>
+                        </div>
                         <h6>{user.name}</h6>
                         <small className="user-adress">{user.adress.slice(0, 12)}</small>
                         <small className="user-adress">{user.adress.slice(12, 50)}</small>
                         <div className="d-flex align-items-center mt-5">
                             <input type="checkbox" name="check" id="check" />
-                            <h6 className="user-adress ms-1">Los datos de facturación y de envío son los mismos</h6>
+                            <h6 className="user-adress6 ms-1">Los datos de facturación y de envío son los mismos</h6>
                         </div>
                     </div>
 
-                    <div className="p-5 rounded-3 mb-3 d-flex flex-column border" id="group">
+                    <div className="info-user-pay p-5 rounded-3 mb-3 d-flex flex-column border" id="group">
 
                         <h5><i className="fa fa-truck me-3 mb-5" aria-hidden="true"></i>Método de envío</h5>
 
@@ -128,26 +131,29 @@ function CartOrder() {
                     </div>
                 </div>
 
-                <div className="cart-order p-5 ms-5 rounded-3 w-50 border" id="group">
+                <div className="cart-order p-5 rounded-3  border" id="group">
                     <h5 className="mb-5"><i className="fa fa-cart-arrow-down me-3" aria-hidden="true"></i>
                         Resumen del pedido
                     </h5>
                     {orders.map(order =>
                         <div className="">
                             <div className="cart-order-total d-flex justify-content-between">
-                                <small className="w-75">Subtotal</small>
+                                <small className="">Subtotal</small>
                                 <p className="">{order.total} €</p>
                             </div>
                             <div className="d-flex justify-content-between">
-                                <small className="w-75">Gastos de envío</small>
+                                <small className="">Gastos de envío</small>
                                 <h6 className="">Gratis</h6>
                             </div>
 
                             <div className=" d-flex justify-content-between border-2 rounded-3 align-self-center" id="cart-order" >
-                                <h5 className="fw-bold w-75 mt-1">Total</h5>
+                                <h5 className="fw-bold  mt-1">Total</h5>
                                 <h5 className="fw-bold mt-1">{order.total} €</h5>
                             </div>
-                            <div>
+                        </div>
+
+                    )}
+                    <div>
                                 {loading ? (
                                     <Loading />
                                 )
@@ -162,10 +168,6 @@ function CartOrder() {
 
 
                             </div>
-
-                        </div>
-
-                    )}
                     <hr />
                     <p className="fw-light"><i className="fa fa-shopping-cart me-3" aria-hidden="true"></i>
                         Mis productos
