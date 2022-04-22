@@ -9,24 +9,24 @@ const upload = require('../config/multer.config')
 const secure = require('../middlewares/mid.secure')
 
 router.get("/products", products.list);
-router.post("/products", secure.isAuthenticated, secure.isAdmin, products.create);
+router.post("/products",  products.create);
 router.get("/products/:id", products.detail);
-router.delete("/products/:id", secure.isAuthenticated, secure.isAdmin, products.delete);
-router.patch("/products/:id", secure.isAuthenticated, secure.isAdmin, products.edit);
+router.delete("/products/:id",  products.delete);
+router.patch("/products/:id",  products.edit);
 
 router.post("/register", auth.register);
 router.post("/login", auth.login);
-router.post("/logout", secure.isAuthenticated, auth.logout)
-router.get("/profile", secure.isAuthenticated, auth.profile)
+router.post("/logout",  auth.logout)
+router.get("/profile",  auth.profile)
 
 // router.get("/authenticate/google", auth.loginWithGoogle)
 // router.get("/authenticate/google/cb", auth.doLoginWithGoogle)
 
-router.put("/shopping-cart", secure.isAuthenticated, cart.upsert)
-router.get("/shopping-cart", secure.isAuthenticated, cart.detail)
-router.post("/shopping-cart/order", secure.isAuthenticated, cart.order)
+router.put("/shopping-cart",  cart.upsert)
+router.get("/shopping-cart",  cart.detail)
+router.post("/shopping-cart/order",  cart.order)
 
-router.get("/orders", secure.isAuthenticated, order.ordersList)
+router.get("/orders",  order.ordersList)
 
 router.use((req, res, next) => next(createError(404, 'Route not found')));
 

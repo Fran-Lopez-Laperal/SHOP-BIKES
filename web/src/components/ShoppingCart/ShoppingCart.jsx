@@ -52,18 +52,20 @@ function ShoppingCart() {
 
                         <div className="d-flex flex-row cart-info">
 
-                        
-                            <img className="cart-image" src={cart.product.image} alt={cart.product.name} />
+                        <div className="cart-detail-img">
+                        <img className="cart-image" src={cart.product.image} alt={cart.product.name} />
+                        </div>
+                            
 
 
-                            <div className="ms-5 cart-info ">
+                            <div className="cart-info-detail ">
                                 <h4>{cart.product.name}</h4>
                                 <small className="moment">
-                                    Fecha de entrega estimada: <strong className="ms-3">{moment().add(6, 'days').calendar()}</strong>
+                                    Fecha de entrega estimada: <small className="ms-3">{moment().add(6, 'days').calendar()}</small>
                                 </small>
                             </div>
 
-                            <div className="cart-price ">
+                            <div className="cart-price">
                                 <small style={{ color: 'red' }}>{cart.product.price}€</small>
                             </div>
 
