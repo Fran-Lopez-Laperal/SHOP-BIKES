@@ -35,11 +35,11 @@ function Register() {
 
     return (
 
-        <div className="register mt-5 mb-5 border-3 rounded-3">
-            <div className="register-info">
-                <ul className="p-5">
-                    <li className="">
-                        <h2>Requisitos de registro</h2>
+        <div className="register mt-5 mb-5">
+            <div className="register-info border rounded-3">
+                <ul className="p-5 ">
+                    <li className="text-center">
+                        <h2 className="text-center">Requisitos de registro</h2>
                     </li>
                     <li>
                         <small><i className="fa fa-check" aria-hidden="true"></i> Introducir un e-mail que ya no se haya utilizado anteriormente</small>

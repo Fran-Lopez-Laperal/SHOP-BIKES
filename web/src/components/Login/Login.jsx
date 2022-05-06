@@ -48,7 +48,7 @@ function Login() {
     return (
         <div className="login mb-5 mt-5 border rounded-3">
 
-            <h3 className="text-center mb-5 mt-3">Iniciar de Sesión</h3>
+            <h3 className="text-center mb-5 mt-5">Iniciar de Sesión</h3>
             <form className="" onSubmit={handleSubmit} >
 
                 <div className="mb-3 input-form">

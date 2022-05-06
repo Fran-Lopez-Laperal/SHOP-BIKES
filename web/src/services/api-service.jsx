@@ -45,10 +45,6 @@ export function deleteProduct(id) {
   return http.delete(`/api/products/${id}`);
 }
 
-export function userProfile(id) {
-  return
-}
-
 export function getCart() {
 
   return http.get('api/shopping-cart')

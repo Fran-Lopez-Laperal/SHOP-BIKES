@@ -16,3 +16,10 @@
     margin-top: 40px;
 }
 
+@media(max-width:1024px){
+    .logo-name-login {
+        font-size: 40px;
+        margin-top: 40px;
+    }
+    
+}
