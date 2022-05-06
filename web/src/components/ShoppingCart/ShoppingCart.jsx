@@ -8,7 +8,6 @@ function ShoppingCart() {
 
     const navigate = useNavigate()
     const [cart, setCart] = useState(undefined)
-    // const [product, setProduct] = useState(undefined)
 
 
     useEffect(() => {
@@ -20,13 +19,6 @@ function ShoppingCart() {
     if (!cart) {
         return null
     }
-
-    // function handleDelete() {
-    //     deleteProduct(product.id).then(() => {
-    //         navigate('/shopping-cart')
-    //     })
-    // }
-
 
     function handleOrder(order) {
         addOrder(order).then(() => {
