@@ -24,7 +24,7 @@ function NavBar() {
             </div>
 
             <div className='logo-name'>
-              <Link to='/'>
+              <Link to='/home'>
                 <span className='ms-3' style={{ color: 'red' }}>BIKE</span>
                 -
                 <span style={{ color: 'black' }}>LOCKER</span>

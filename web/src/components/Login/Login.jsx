@@ -78,7 +78,7 @@ function Login() {
                 </button>
             </form>
             <div className='logo-name-login'>
-              <Link to='/'>
+              <Link to='/home'>
                 <span style={{ color: 'red' }}>BIKE</span>
                 -
                 <span style={{ color: 'black' }}>LOCKER</span>

@@ -35,7 +35,7 @@ function Register() {
 
     return (
 
-        <div className="register mt-5 border-3 rounded-3">
+        <div className="register mt-5 mb-5 border-3 rounded-3">
             <div className="register-info">
                 <ul className="p-5">
                     <li className="">
@@ -52,7 +52,7 @@ function Register() {
                     </li>
                 </ul>
                 <div className='logo-name-register text-center'>
-                    <Link to='/'>
+                    <Link to='/home'>
                         <span style={{ color: 'red' }}>BIKE</span>
                         -
                         <span style={{ color: 'black' }}>LOCKER</span>

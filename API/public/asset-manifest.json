@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.55e02e9b.css",
-    "main.js": "/static/js/main.62203a43.js",
+    "main.js": "/static/js/main.5b2afe10.js",
     "static/media/sram_x01_eagle_2021_accion_1.jpeg": "/static/media/sram_x01_eagle_2021_accion_1.ca9076897f9f760def65.jpeg",
     "static/media/Captura de Pantalla 2022-03-22 a las 18.43.23.png": "/static/media/Captura de Pantalla 2022-03-22 a las 18.43.23.b3bd709845a4873e4caa.png",
     "static/media/bicis.jpeg": "/static/media/bicis.6ce36e60cac69bee15d5.jpeg",
@@ -11,10 +11,10 @@
     "static/media/ASSOS-action1-600x400-1.jpeg": "/static/media/ASSOS-action1-600x400-1.ff486fd6e282fbd95134.jpeg",
     "index.html": "/index.html",
     "main.55e02e9b.css.map": "/static/css/main.55e02e9b.css.map",
-    "main.62203a43.js.map": "/static/js/main.62203a43.js.map"
+    "main.5b2afe10.js.map": "/static/js/main.5b2afe10.js.map"
   },
   "entrypoints": [
     "static/css/main.55e02e9b.css",
-    "static/js/main.62203a43.js"
+    "static/js/main.5b2afe10.js"
   ]
 }
