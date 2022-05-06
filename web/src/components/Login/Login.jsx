@@ -4,6 +4,7 @@ import './Login.css'
 import { Navigate, useNavigate, } from "react-router";
 import { AuthContext } from "../../contexts/AuthContext";
 import { login } from "../../services/api-service"
+import { Link } from "react-router-dom";
 
 
 function Login() {
@@ -40,22 +41,20 @@ function Login() {
     }
 
     if (user) {
-        return <Navigate to='/' />
+        return <Navigate to='/home' />
     }
 
 
     return (
-        <div className="login col-4 mb-5 mt-5 p-2 border rounded-3 p-5">
-          
+        <div className="login mb-5 mt-5 border rounded-3">
+
             <h3 className="text-center mb-5 mt-3">Iniciar de Sesión</h3>
             <form className="" onSubmit={handleSubmit} >
 
-                <div className="mb-3">
+                <div className="mb-3 input-form">
                     {error && <div className="alert alert-danger">{error}</div>}
-                    <label for="exampleInputEmail1" className="form-label">
-                        Email de usuario
-                    </label>
                     <input
+                        placeholder="Email usuario"
                         type="email"
                         className="form-control"
                         id="email"
@@ -65,10 +64,8 @@ function Login() {
                 </div>
 
                 <div className="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">
-                        Contraseña
-                    </label>
                     <input
+                        placeholder="Contraseña"
                         type="password"
                         className="form-control"
                         id="password"
@@ -76,15 +73,17 @@ function Login() {
                         onChange={handleChange}
                     />
                 </div>
-
                 <button type="submit" className="btn btn-primary col-12">
                     Login
                 </button>
-                <div>
-                    <a href="http://localhost:3001/api/authenticate/google">Google Login</a>
-                </div>
-
             </form>
+            <div className='logo-name-login'>
+              <Link to='/'>
+                <span style={{ color: 'red' }}>BIKE</span>
+                -
+                <span style={{ color: 'black' }}>LOCKER</span>
+              </Link>
+            </div>
         </div>
     )
 }

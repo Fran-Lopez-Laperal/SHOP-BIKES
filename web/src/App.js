@@ -20,14 +20,14 @@ function App() {
     <div className="app ">
       <NavBar />
 
-      <div className="container">
+      <div className="container" id="container">
         <Secondarybar />
         <Routes>
-          <Route path='/' element={<Home />} />
+          <Route path='/home' element={<Home />} />
           <Route path='/products' element={<Products />} />
           <Route path='/products/:id' element={<ProductDetail />}/>
           <Route path='/login' element={<Login />} />
-          <Route path='/register' element={<Register />} />
+          <Route path='/' element={<Register />} />
           <Route path='/profile' element={<Profile/>}/>
           <Route path='/shopping-cart' element={<ShoppingCart />} />
           <Route path='/shopping-cart/order' element={<CartOrder/>} />

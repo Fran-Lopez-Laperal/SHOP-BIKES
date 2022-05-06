@@ -1,12 +1,52 @@
 .register{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     background-color: transparent;
+    margin-bottom: auto;
 }
 
-.register .register-info{
-    background-color: lightgrey;
-    height: 435px;
+@media(max-width:1024px){
+    .register{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width:1024px){
+    .register-info{
+        height: 20%;
+    }
+}
+
+@media(max-width:1024px){
+    .logo-name-register{
+       font-size: 40px;
+       margin-bottom: 10px;
+
+    }
+}
+
+@media(min-width:1024px){
+    .logo-name-register {
+        font-size: 60px;
+        margin-bottom: 10px;
+    }
+}
+
+
+.register-info{
+    background-color:  #acb6c1;
     list-style:none;
-    margin-top: 55px;
+}
+
+@media(min-width:1024px){
+    .div-form{
+        width: 500px;
+    }
+}
+
+@media(max-width:1024px){
+    .div-form{
+        width: 400px;
+    }
 }

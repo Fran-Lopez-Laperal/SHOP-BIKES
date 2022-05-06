@@ -37,7 +37,7 @@ function NavBar() {
               {!user ? (
                 <div className='d-flex'>
                   <div className='d-flex me-3'>
-                    <Link className='user-register text-center' to='/register'>
+                    <Link className='user-register text-center' to='/'>
                       <i className="fa fa-user-plus" ></i>
                       <span className='register'>Registro</span>
                     </Link>

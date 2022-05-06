@@ -1,6 +1,18 @@
 .login {
-    margin-left: 370px;
+    background-color: #acb6c1;
+    display: flex;
+    flex-direction: column;
     height: 445px;
-    background-color: white;
+    align-items: center;
+    width: 100%;
+}
+
+.input-form{
+    width: 300px;
+}
+
+.logo-name-login {
+    font-size: 60px;
+    margin-top: 40px;
 }
 

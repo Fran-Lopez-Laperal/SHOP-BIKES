@@ -35,32 +35,38 @@ function Register() {
 
     return (
 
-        <div className="register mt-5 mb-5 p-5 border-3 rounded-3">
-            <ul className="register-info w-50 p-5 ">
-                <li className="">
-                    <h2>Requisitos para registrarse</h2>
-                </li>
-                <li>
-                    <small><i className="fa fa-check" aria-hidden="true"></i> Introducir un e-mail que ya no se haya utilizado anteriormente</small>
-                </li>
-                <li>
-                    <small><i className="fa fa-check" aria-hidden="true"></i>Introducir una contraseña de al menos 9 caracteres sin espacios</small>
-                </li>
-                <li>
-                    <small><i className="fa fa-check" aria-hidden="true"></i>Introducir tu nombre</small>
-                </li>
+        <div className="register mt-5 border-3 rounded-3">
+            <div className="register-info">
+                <ul className="p-5">
+                    <li className="">
+                        <h2>Requisitos de registro</h2>
+                    </li>
+                    <li>
+                        <small><i className="fa fa-check" aria-hidden="true"></i> Introducir un e-mail que ya no se haya utilizado anteriormente</small>
+                    </li>
+                    <li>
+                        <small><i className="fa fa-check" aria-hidden="true"></i>Introducir una contraseña de al menos 9 caracteres sin espacios</small>
+                    </li>
+                    <li>
+                        <small><i className="fa fa-check" aria-hidden="true"></i>Introducir tu nombre</small>
+                    </li>
+                </ul>
+                <div className='logo-name-register text-center'>
+                    <Link to='/'>
+                        <span style={{ color: 'red' }}>BIKE</span>
+                        -
+                        <span style={{ color: 'black' }}>LOCKER</span>
+                    </Link>
+                </div>
+            </div>
 
-            </ul>
-
-            <div className="div-form w-50 p-5">
-                <form className="" onSubmit={handleSubmit}>
+            <div className="div-form">
+                <form className="p-5" onSubmit={handleSubmit}>
 
                     <div className="mb-3">
                         {error && <div className="alert alert-danger">{error}</div>}
-                        <label for="name" className="form-label">
-                           Nombre completo
-                        </label>
                         <input
+                            placeholder="Nombre Completo"
                             type="name"
                             className="form-control"
                             id="name"
@@ -70,10 +76,8 @@ function Register() {
                     </div>
 
                     <div className="mb-3">
-                        <label for="email" className="form-label">
-                            Email
-                        </label>
                         <input
+                            placeholder='example@example.es'
                             type="email"
                             className="form-control"
                             id="email"
@@ -83,10 +87,8 @@ function Register() {
                     </div>
 
                     <div className="mb-3">
-                        <label for="password" className="form-label">
-                            Contraseña
-                        </label>
                         <input
+                            placeholder='Contraseña'
                             type="password"
                             className="form-control"
                             id="password"
@@ -95,10 +97,8 @@ function Register() {
                         />
                     </div>
                     <div className="mb-3">
-                        <label for="adress" className="form-label">
-                            Dirección de envío
-                        </label>
                         <input
+                            placeholder='Dirección completa'
                             type="adress"
                             className="form-control"
                             id="adress"
@@ -108,13 +108,15 @@ function Register() {
                     </div>
 
                     <hr />
-                    <button type="submit" className="btn btn-danger col-12 mb-1">
+                    <button type="submit" className="btn btn-danger mb-3 col-12">
                         Registrarse
                     </button>
+                    <div>
+                        <Link to='/login' className="btn btn-primary col-12">
+                            Iniciar Sesión
+                        </Link>
+                    </div>
                 </form>
-                <Link to='/login' className="btn btn-primary col-12">
-                    Iniciar Sesión
-                </Link>
             </div>
 
         </div>

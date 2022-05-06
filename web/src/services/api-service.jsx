@@ -94,13 +94,11 @@ export function addProductToCart(productId) {
 }
 
 export function upsertCart(cart) {
-  console.log(cart)
   return http.put('/api/shopping-cart', cart)
 }
 
 
 export function addOrder(order){
-  console.log(order)
   return http.post('/api/shopping-cart/order', order)
 }
 

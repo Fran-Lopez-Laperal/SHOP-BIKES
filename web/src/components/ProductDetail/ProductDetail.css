@@ -14,7 +14,7 @@
 .product-detail .product-image{
     margin-top: 70px;
     padding: 10px;
-    transition: transform .2s;
+    transition: transform 2s;
 }
 
 .product-image:hover{
