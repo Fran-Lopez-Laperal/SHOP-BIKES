@@ -30,6 +30,12 @@ module.exports.create = (req, res, next) => {
         .catch(error => next(error))
 }
 
+
+
+
+
+
+
 module.exports.detail = (req, res, next) => {
     Product.findById(req.params.id)
         .then((product) => {
