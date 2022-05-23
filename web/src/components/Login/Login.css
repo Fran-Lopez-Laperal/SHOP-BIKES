@@ -7,9 +7,11 @@
     width: 500px;
 }
 
-.login-div{
-    display: flex;
-    justify-content: center;
+@media(min-width:1024px){
+    .login-div{
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .input-form{
@@ -26,5 +28,12 @@
         font-size: 40px;
         margin-top: 40px;
     }
+    
+}
+
+@media(max-width:1024px){
+  .login{
+    width: 100%;
+  }
     
 }

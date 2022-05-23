@@ -1,13 +1,17 @@
+import React from "react"
 import { useEffect, useState } from "react"
 import { getCart, addOrder } from "../../services/api-service"
 import moment from "moment"
 import './ShoppingCart.css'
 import { Link, useNavigate } from "react-router-dom"
+import { AuthContext } from '../../contexts/AuthContext';
+
 
 function ShoppingCart() {
 
     const navigate = useNavigate()
     const [cart, setCart] = useState(undefined)
+    const { user } = React.useContext(AuthContext)
 
 
     useEffect(() => {
