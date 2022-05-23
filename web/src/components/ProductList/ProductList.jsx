@@ -1,5 +1,5 @@
 
-   
+
 import './PorductList.css'
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router";
@@ -28,27 +28,30 @@ function ProductList() {
     }
 
     return (
-        <div className='item-body row justify-content-center  mt-3'>
-            {products.map(product => (
+        <>
+            <hr />
+            <div className='item-body row justify-content-center'>
+                {products.map(product => (
 
-                <div className="card shadow mt-5 ms-2  mb-5" style={{ width: '16rem' }} key={product.id}>
-                    <Link to={`/products/${product.id}`}  style={{textDecoration:"none"}}>
-                        <div className='inner'>
-                            <img src={product.image} className="card-img-top mt-2 p-1" alt={product.name} />
-                        </div>
-                    </Link>
-                    <hr />
-                    <div className="card-body">
-                        <h5 className="card-title">{product.name}</h5>
-                        <small>{product.price}€</small>
-                        <div>
-                            <small style={{ color: 'grey' }}>M L XL</small>
+                    <div className="card shadow mt-1 mb-2 ms-2" style={{ width: '16rem' }} key={product.id}>
+                        <Link to={`/products/${product.id}`} style={{ textDecoration: "none" }}>
+                            <div className='inner'>
+                                <img src={product.image} className="card-img-top mt-2 p-1" alt={product.name} />
+                            </div>
+                        </Link>
+                        <hr />
+                        <div className="card-body">
+                            <h5 className="card-title">{product.name}</h5>                         
+                                <small>{product.price}€</small>
+                            <div className='card-size'>
+                                <small style={{ color: 'grey' }}>M L XL</small>
+                            </div>
                         </div>
                     </div>
-                </div>
-            )
-            )}
-        </div>
+                )
+                )}
+            </div>
+        </>
     )
 }
 

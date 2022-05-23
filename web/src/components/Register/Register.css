@@ -1,12 +1,11 @@
-.register{
+.register-div{
     display: flex;
     justify-content: space-around;
-    background-color: transparent;
-    margin-bottom: auto;
+    background-color:  #acb6c1;
 }
 
 @media(max-width:1024px){
-    .register{
+    .register-div{
         display: flex;
         flex-direction: column;
     }
@@ -14,23 +13,20 @@
 
 @media(max-width:1024px){
     .register-info{
-        height: 445px;
         list-style: none;
     }
 }
 
 @media(max-width:1024px){
     .logo-name-register{
+        margin-top: -60px;
        font-size: 40px;
-       margin-bottom: 10px;
-
     }
 }
 
 @media(min-width:1024px){
     .logo-name-register {
         font-size: 60px;
-        margin-bottom: 10px;
     }
 }
 
@@ -43,14 +39,14 @@
    list-style: none;
 }
 
+
+    .div-form{
+        background-color:  #acb6c1;
+    }
+
+
 @media(min-width:1024px){
     .div-form{
         width: 500px;
-    }
-}
-
-@media(max-width:1024px){
-    .div-form{
-        width: 400px;
     }
 }

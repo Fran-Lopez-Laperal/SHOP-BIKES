@@ -46,43 +46,44 @@ function Login() {
 
 
     return (
-        <div className="login mb-5 mt-5 border rounded-3">
+        <div className="login-div">
+            <div className="login mb-5 mt-5 border rounded-3">
+                <h3 className="text-center mb-5 mt-5">Iniciar de Sesión</h3>
+                <form className="" onSubmit={handleSubmit} >
 
-            <h3 className="text-center mb-5 mt-5">Iniciar de Sesión</h3>
-            <form className="" onSubmit={handleSubmit} >
+                    <div className="mb-3 input-form">
+                        {error && <div className="alert alert-danger">{error}</div>}
+                        <input
+                            placeholder="Email usuario"
+                            type="email"
+                            className="form-control"
+                            id="email"
+                            value={data.email}
+                            onChange={handleChange}
+                        />
+                    </div>
 
-                <div className="mb-3 input-form">
-                    {error && <div className="alert alert-danger">{error}</div>}
-                    <input
-                        placeholder="Email usuario"
-                        type="email"
-                        className="form-control"
-                        id="email"
-                        value={data.email}
-                        onChange={handleChange}
-                    />
+                    <div className="mb-3">
+                        <input
+                            placeholder="Contraseña"
+                            type="password"
+                            className="form-control"
+                            id="password"
+                            value={data.password}
+                            onChange={handleChange}
+                        />
+                    </div>
+                    <button type="submit" className="btn btn-primary col-12">
+                        Login
+                    </button>
+                </form>
+                <div className='logo-name-login'>
+                    <Link to='/home'>
+                        <span style={{ color: 'red' }}>BIKE</span>
+                        -
+                        <span style={{ color: 'black' }}>LOCKER</span>
+                    </Link>
                 </div>
-
-                <div className="mb-3">
-                    <input
-                        placeholder="Contraseña"
-                        type="password"
-                        className="form-control"
-                        id="password"
-                        value={data.password}
-                        onChange={handleChange}
-                    />
-                </div>
-                <button type="submit" className="btn btn-primary col-12">
-                    Login
-                </button>
-            </form>
-            <div className='logo-name-login'>
-              <Link to='/home'>
-                <span style={{ color: 'red' }}>BIKE</span>
-                -
-                <span style={{ color: 'black' }}>LOCKER</span>
-              </Link>
             </div>
         </div>
     )

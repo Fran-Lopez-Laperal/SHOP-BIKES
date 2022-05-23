@@ -21,14 +21,14 @@
     transform: scale(1.5);
 }
 
-
+/* 
 .product-price{
     margin-left:200px;
     font-weight: 600px;
 }
 
 @media(max-width:1024px){
-    .card{
+    .card-detail{
         width: 380px;
     }
 }
@@ -36,4 +36,4 @@
     .product-image{
         padding: 5px;
     }
-}
+} */

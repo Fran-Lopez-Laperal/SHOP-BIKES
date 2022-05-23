@@ -1,9 +1,4 @@
- /* .card{
-     border-right: none;
-}  */
-.card-body{
-    margin-top: 10px;
-}
+
 .card-title{
     text-align: left;
 }
@@ -20,10 +15,30 @@
     transform:  scale(1.5);
 }
 
+@media only screen and (max-width:1024px){
+    .card-size{
+        display: none;
+    }
+}
 
-/* .item-body{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-}  */
+@media (max-width:1024px){
+    .card-body h5{
+        margin-top: -20px;
+        font-size: 9px;
+    }
+}
+
+@media (max-width:1024px){
+    .card-body small {
+        color: red;  
+    }
+}
+
+@media (max-width:1024px){
+    .card{
+       width: 30% !important;
+    }
+}
+
 
 

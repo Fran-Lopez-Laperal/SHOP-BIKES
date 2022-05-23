@@ -1,18 +1,14 @@
-@media only screen and (max-width:1024px){
+/* @media only screen and (max-width:1024px){
     .last-products{
         display: none;
     }
-}
+} */
+
 
 @media(max-width:1024px){
     .products{
-        flex-direction:column;
-    }
-}
-
-@media(max-width:1024px){
-    .side-products{
-       justify-content: center;
+        display:flex;
+        flex-direction: column;
     }
 }
 

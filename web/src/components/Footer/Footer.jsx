@@ -18,7 +18,7 @@ function Footer() {
                         </li>
                         </Link>
                         <Link to='#'>
-                        <li>
+                        <li className="d-flex">
                             <i className="me-3 fa fa-instagram"></i>
                             Instagram
                         </li>

@@ -10,3 +10,17 @@
 .info-process h3{
     color: #77d146;
 } 
+
+@media(max-width:1024px){
+    .pay-size h4{
+        font-size:15px ;
+    }
+
+    .pay-size h3{
+        font-size: 15px;
+    }
+
+    .pay-size h1{
+        font-size: 15px;
+    }
+}

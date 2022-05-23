@@ -23,28 +23,25 @@
     width: 30px;
 }
 
+
 @media (max-width:1024px) {
     .footer {
-        width: auto;
+        font-size: 12px;
         height: auto;
+        margin-left: -25px;
+        width: auto;
     }
 }
 
 @media (max-width:1024px) {
     .footer-div {
-      flex-wrap: wrap;
-      text-align: center;
-    }
-}
-
-@media (max-width:1024px) {
-    .footer-ul {
+      flex-direction:row;
       text-align: start;
     }
 }
 
 @media (max-width:1024px) {
-    .footer-table {
-    text-align: start;
+    .footer-ul {
+     justify-content: center;
     }
 }

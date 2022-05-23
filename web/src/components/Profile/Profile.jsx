@@ -9,12 +9,12 @@ function Profile() {
 
   return (
     <div className="div-profile">
-      <div className="profile mb-5 mt-5 col-6 text-center">
-        <div className="card">
+      <div className="profile mb-5 mt-5">
+        <div className="card-profile">
           <div className="card-header">
           </div>
           <div className="card-body text-center">
-            <h5 className="card-title text-center">{user.name}</h5>
+            <h1 className="card-title text-center mt-2">{user.name}</h1>
             <p className="card-text">{user.email}</p>
             <p className="card-text">{user.adress}</p>
             <button onClick={handleLogout} className="btn btn-danger">Cerrar Sesión</button>
@@ -23,7 +23,7 @@ function Profile() {
             {(user.role === 'admin') && (
               <div className="text-center">
                 <hr />
-                <Link to='/create' className="btn btn-success ">Añadir producto</Link>
+                <Link to='/create' className="btn btn-success">Añadir producto</Link>
               </div>
             )}
           </div>

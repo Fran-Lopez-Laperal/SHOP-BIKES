@@ -1,9 +1,18 @@
-.profile {
-   margin-left: 250px;
-
-}
-
 .div-profile{
+   display: flex;
+   justify-content: center;
+   align-items: center;
    height: 505px;
 }
 
+.card-profile{
+   background-color: white;
+   border-radius: 10px;
+   width: 600px;
+}
+
+@media(max-width:1024px){
+   .card-profile{
+      width: 330px;
+   }
+}

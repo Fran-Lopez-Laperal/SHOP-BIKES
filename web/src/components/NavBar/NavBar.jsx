@@ -1,6 +1,6 @@
 
 import './NavBar.css'
-import { Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import React from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
 
@@ -23,14 +23,25 @@ function NavBar() {
               </div>
             </div>
 
-            <div className='logo-name'>
-              <Link to='/home'>
-                <span className='ms-3' style={{ color: 'red' }}>BIKE</span>
-                -
-                <span style={{ color: 'black' }}>LOCKER</span>
-              </Link>
-            </div>
+            {!user ?
+              (
+                <div className='logo-name'>
+                  <span className='ms-3' style={{ color: 'red' }}>BIKE</span>
+                  -
+                  <span style={{ color: 'black' }}>LOCKER</span>
+                </div>
+              )
+              :
+              <div className='logo-name'>
+                <Link to='/home'>
+                  <span className='ms-3' style={{ color: 'red' }}>BIKE</span>
+                  -
+                  <span style={{ color: 'black' }}>LOCKER</span>
+                </Link>
+              </div>
+            }
           </div>
+
           <div className='d-flex div-cart'>
             <div className='logo-user'>
 
@@ -38,13 +49,13 @@ function NavBar() {
                 <div className='d-flex'>
                   <div className='d-flex me-3'>
                     <Link className='user-register text-center' to='/'>
-                      <i className="fa fa-user-plus" ></i>
+                      <i className="fa fa-user-plus  me-1" ></i>
                       <span className='register'>Registro</span>
                     </Link>
                   </div>
                   <div className='d-flex'>
                     <Link className='user-register text-center' to='/login'>
-                      <i className="fa fa-sign-in" ></i>
+                      <i className="fa fa-sign-in  me-1" ></i>
                       <span className='register'>Inicio sesión</span>
                     </Link>
                   </div>

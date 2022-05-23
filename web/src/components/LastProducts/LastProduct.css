@@ -7,3 +7,27 @@
 .last-product-card img {
  height: 90px;
 }
+
+
+
+@media(max-width:1024px){
+    .last-product{
+     display: flex;
+     flex-direction:row;
+     justify-content: center;
+    }
+}
+
+@media(max-width:1024px){
+    .last-product img{
+        display: flex;
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media only screen and (max-width:1024px){
+    .last-product-card h6{
+        display: none;
+    }
+}

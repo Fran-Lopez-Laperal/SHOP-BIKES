@@ -4,7 +4,12 @@
     flex-direction: column;
     height: 445px;
     align-items: center;
-    width: 100%;
+    width: 500px;
+}
+
+.login-div{
+    display: flex;
+    justify-content: center;
 }
 
 .input-form{

@@ -35,8 +35,8 @@ function Register() {
 
     return (
 
-        <div className="register mt-5 mb-5">
-            <div className="register-info border rounded-3">
+        <div className="register-div mt-5 mb-5 border rounded-3">
+            <div className="register-info mb-5">
                 <ul className="p-5 ">
                     <li className="text-center">
                         <h2 className="text-center">Requisitos de registro</h2>
@@ -63,7 +63,7 @@ function Register() {
             <div className="div-form">
                 <form className="p-5" onSubmit={handleSubmit}>
 
-                    <div className="mb-3">
+                    <div className="mb-2">
                         {error && <div className="alert alert-danger">{error}</div>}
                         <input
                             placeholder="Nombre Completo"
@@ -75,7 +75,7 @@ function Register() {
                         />
                     </div>
 
-                    <div className="mb-3">
+                    <div className="mb-2">
                         <input
                             placeholder='example@example.es'
                             type="email"
@@ -86,7 +86,7 @@ function Register() {
                         />
                     </div>
 
-                    <div className="mb-3">
+                    <div className="mb-2">
                         <input
                             placeholder='Contraseña'
                             type="password"
@@ -96,7 +96,7 @@ function Register() {
                             onChange={handleChange}
                         />
                     </div>
-                    <div className="mb-3">
+                    <div className="mb-2">
                         <input
                             placeholder='Dirección completa'
                             type="adress"
@@ -106,11 +106,10 @@ function Register() {
                             onChange={handleChange}
                         />
                     </div>
-
-                    <hr />
-                    <button type="submit" className="btn btn-danger mb-3 col-12">
+                    <button type="submit" className="btn btn-danger col-12">
                         Registrarse
                     </button>
+                    <hr />
                     <div>
                         <Link to='/login' className="btn btn-primary col-12">
                             Iniciar Sesión

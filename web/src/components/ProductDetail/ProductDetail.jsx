@@ -38,8 +38,8 @@ function ProductDetail() {
     return (
         <>
             <hr />
-            <div className='card-div'>
-                <div className=" card mb-5 mt-5" >
+           
+                <div className=" card-detail mb-5 mt-5" >
                     <div className="row g-0">
                         <div className="product-image col-md-6">
                             <img src={product.image} className="img-fluid rounded-start mt-5" alt={product.id} />
@@ -60,7 +60,7 @@ function ProductDetail() {
                             </div>
                         </div>
                     </div>
-                </div>
+          
             </div>
         </>
     )

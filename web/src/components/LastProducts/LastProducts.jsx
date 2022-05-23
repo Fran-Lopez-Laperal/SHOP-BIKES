@@ -19,18 +19,20 @@ function LastProducts() {
     }
 
     return (
-        <div className="last-product p-5 mt-5 text-center">
-            <h4 className="text-danger">Novedades</h4>
-            {products.map(product =>
+        <>
+            <h5 className="text-danger mt-5 ">Últimas Novedades</h5>
+            <div className="last-product text-center">
+                {products.map(product =>
 
-                <Link to={`/products/${product.id}`} key={`${product.id}-last`}>
-                    <div className="last-product-card rounded-3 border mt-4 p-2 text-center">
-                        <h6>{product.name}</h6>
-                        <img src={product.image} alt={product.name} />
-                    </div>
-                </Link>
-            )}
-        </div>
+                    <Link to={`/products/${product.id}`} key={`${product.id}-last`}>
+                        <div className="last-product-card rounded-3 border mt-4 p-2 text-center">
+                            <h6>{product.name}</h6>
+                            <img src={product.image} alt={product.name} />
+                        </div>
+                    </Link>
+                )}
+            </div>
+        </>
     )
 }
 
