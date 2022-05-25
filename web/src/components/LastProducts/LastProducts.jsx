@@ -25,13 +25,14 @@ function LastProducts() {
                 {products.map(product =>
 
                     <Link to={`/products/${product.id}`} key={`${product.id}-last`}>
-                        <div className="last-product-card rounded-3 border mt-4 p-2 text-center">
+                        <div className="last-product-card rounded-3 border ms-1 me-1 mt-4 p-2 text-center">
                             <h6>{product.name}</h6>
                             <img src={product.image} alt={product.name} />
                         </div>
                     </Link>
                 )}
             </div>
+            <hr />
         </>
     )
 }

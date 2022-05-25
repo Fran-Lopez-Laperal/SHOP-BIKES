@@ -11,9 +11,10 @@ function Products() {
         <div className="products d-flex ms-2">
 
             <div className="side-bar-products">
-                <CategoriesSideBar />
+                <LastProducts />
+
                 <div className="last-products">
-                    <LastProducts />
+                    <CategoriesSideBar />
                 </div>
             </div>
 

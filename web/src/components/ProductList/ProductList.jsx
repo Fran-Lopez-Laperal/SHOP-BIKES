@@ -41,11 +41,11 @@ function ProductList() {
                         </Link>
                         <hr />
                         <div className="card-body">
-                            <h5 className="card-title">{product.name}</h5>                         
+                            <h5 className="card-title">{product.name}</h5>
+                            <div className='card-price'>
                                 <small>{product.price}€</small>
-                            <div className='card-size'>
-                                <small style={{ color: 'grey' }}>M L XL</small>
                             </div>
+                            <p style={{ color: 'grey' }}>M L XL</p>
                         </div>
                     </div>
                 )

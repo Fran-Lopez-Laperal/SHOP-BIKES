@@ -4,11 +4,23 @@
     }
 } */
 
+.side-bar-products{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: auto;
+}
 
 @media(max-width:1024px){
     .products{
         display:flex;
         flex-direction: column;
+    }
+}
+
+@media(max-width:1024px){
+    .last-products{
+       margin-top: -40px;
+       margin-bottom: 40px;
     }
 }
 

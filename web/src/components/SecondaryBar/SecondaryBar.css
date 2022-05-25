@@ -1,11 +1,13 @@
+
+   
 .secondary-bar {
   width: auto;
   height: 75px;
   justify-items: center;
   background-image: url(../../assets/CarouselImages/sram_x01_eagle_2021_accion_1.jpeg);
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 1px;
+ background-size: cover;
+ background-position: 1px;
 }
 
 .secondary-bar .secondary-form {
@@ -16,15 +18,9 @@
 
 @media(max-width:1024px){
   .secondary-form{
-    margin-right: 110px;
-    width: 410px;
-  }
-}
-
-@media(max-width:1024px){
-  .secondary-bar{
-    width: auto;
-    height: 50px;
+    margin-right: 150px;
+    width: 400px;
+    
   }
 }
 
@@ -38,12 +34,15 @@
 
 .secondary-bar ::placeholder {
   color: white;
+
 }
+
+
 
 .secondary-bar .form-control {
   background-color: transparent;
   border: solid 1px;
-  width:  510px;
+  width:  500px;
   height: 25px;
   text-decoration: none;
   color: darkgray;
