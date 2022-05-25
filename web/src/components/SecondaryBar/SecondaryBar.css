@@ -60,3 +60,9 @@
 .secondary-bar .fa {
   color: white;
 }
+
+@media(max-width:1024px){
+  .secondary-bar{
+    height:35px;
+  }
+}

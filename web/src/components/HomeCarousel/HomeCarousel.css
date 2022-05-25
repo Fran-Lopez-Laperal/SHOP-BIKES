@@ -9,7 +9,7 @@
 @media(max-width:1024px){
     .carousel-inner{
         height: 100px;
-        margin-top: -10px !important;
+        margin-top: -25px !important;
     }
 }
 

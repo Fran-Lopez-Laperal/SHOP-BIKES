@@ -7,7 +7,6 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import ShoppingCart from "./components/ShoppingCart/ShoppingCart";
 import ProductDetail from "./components/ProductDetail/ProductDetail";
-import Secondarybar from "./components/SecondaryBar/SecondaryBar";
 import './App.css'
 import Home from "./pages/Home/Home";
 import Profile from "./components/Profile/Profile";
@@ -21,7 +20,6 @@ function App() {
       <NavBar />
 
       <div className="container" id="container">
-        <Secondarybar />
         <Routes>
           <Route path='/home' element={<Home />} />
           <Route path='/products' element={<Products />} />
