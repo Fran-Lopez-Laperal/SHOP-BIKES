@@ -158,7 +158,7 @@ function CartOrder() {
                                     <Loading />
                                 )
                                     :
-                                    <button className="btn btn-danger grid mt-3 col-12" onClick={() => handleLoading()}>
+                                    <button className="btn btn-danger grid mt-3 col-12"  onClick={() => handleLoading()}>
                                         <i className="fa fa-cart-arrow-down me-5" aria-hidden="true"></i>
                                         Realizar pedido
                                     </button>
