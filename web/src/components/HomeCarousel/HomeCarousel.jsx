@@ -12,11 +12,11 @@ function HomeCarousel() {
 
                     <div className="carousel-inner rounded-3 border-3">
                         <div className="carousel-item active">
-                            <img src={img1} className="d-block" alt={img1} />                    
+                            <img src={img1} className="d-block" alt={img1} />
                         </div>
-                        
+
                         <div className="carousel-item">
-                            <img src={img2} className="d-block" alt={img2} />                      
+                            <img src={img2} className="d-block" alt={img2} />
                         </div>
 
                         <div className="carousel-item">

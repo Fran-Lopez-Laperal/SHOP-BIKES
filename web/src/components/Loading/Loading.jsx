@@ -1,15 +1,15 @@
-import {Spinner} from 'reactstrap'
+import { Spinner } from 'reactstrap'
 import './Loading.css'
 
-function Loading () {
+function Loading() {
     return (
-        
-            <div className='loading text-center'>
-                <div className='spinner'>
-                    <Spinner color='primary'/>
-                    <h2 className='fw-light'>Procesando pago...</h2>
-                </div>
+
+        <div className='loading text-center'>
+            <div className='spinner'>
+                <Spinner color='primary' />
+                <h2 className='fw-light'>Procesando pago...</h2>
             </div>
+        </div>
     )
 }
 

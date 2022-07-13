@@ -23,13 +23,13 @@ function App() {
         <Routes>
           <Route path='/home' element={<Home />} />
           <Route path='/products' element={<Products />} />
-          <Route path='/products/:id' element={<ProductDetail />}/>
+          <Route path='/products/:id' element={<ProductDetail />} />
           <Route path='/login' element={<Login />} />
           <Route path='/' element={<Register />} />
-          <Route path='/profile' element={<Profile/>}/>
+          <Route path='/profile' element={<Profile />} />
           <Route path='/shopping-cart' element={<ShoppingCart />} />
-          <Route path='/shopping-cart/order' element={<CartOrder/>} />
-          <Route path="/pay" element={<Pay/>} />
+          <Route path='/shopping-cart/order' element={<CartOrder />} />
+          <Route path="/pay" element={<Pay />} />
         </Routes>
       </div>
       <Footer />

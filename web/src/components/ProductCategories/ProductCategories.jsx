@@ -12,35 +12,35 @@ function ProductCategories() {
 
     return (
         <div className='product-category d-flex flex-wrap  justify-content-center mb-5 rounded-3 border-3'>
-           
-                <Link to="/products?category=bicis">
-                    <div className='category category-1 rounded-3' id='box'>
-                        <img src={bikeImage} alt={bikeImage} className='rounded-3' />
-                        <p>BICICLETAS</p>
-                    </div>
-                </Link>
 
-                <Link to="/products?category=components">
-                    <div className='category rounded-3' id='box'>
-                        <img src={accesoryImage} alt={accesoryImage} className='rounded-3'/>
-                        <p>COMPONENTES</p>
-                    </div>
-                </Link>
-        
+            <Link to="/products?category=bicis">
+                <div className='category category-1 rounded-3' id='box'>
+                    <img src={bikeImage} alt={bikeImage} className='rounded-3' />
+                    <p>BICICLETAS</p>
+                </div>
+            </Link>
 
-            
-                <Link to="/products?category=electronic">
-                    <div className='category rounded-3' id='box'>
-                        <img src={electronicImage} alt={electronicImage} className='rounded-3'/>
-                        <p>ELECTRONICA</p>
-                    </div>
-                </Link>
-                <Link to="/products?category=clothes">
-                    <div className='category category-4 rounded-3' id='box'>
-                        <img src={clothesImage} alt={clothesImage} className='rounded-3'/>
-                        <p>ROPA</p>
-                    </div>
-                </Link>
+            <Link to="/products?category=components">
+                <div className='category rounded-3' id='box'>
+                    <img src={accesoryImage} alt={accesoryImage} className='rounded-3' />
+                    <p>COMPONENTES</p>
+                </div>
+            </Link>
+
+
+
+            <Link to="/products?category=electronic">
+                <div className='category rounded-3' id='box'>
+                    <img src={electronicImage} alt={electronicImage} className='rounded-3' />
+                    <p>ELECTRONICA</p>
+                </div>
+            </Link>
+            <Link to="/products?category=clothes">
+                <div className='category category-4 rounded-3' id='box'>
+                    <img src={clothesImage} alt={clothesImage} className='rounded-3' />
+                    <p>ROPA</p>
+                </div>
+            </Link>
         </div>
     )
 }

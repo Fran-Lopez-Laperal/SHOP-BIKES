@@ -45,7 +45,7 @@ function NavBar() {
           <div className='d-flex div-cart'>
             <div className='logo-user'>
 
-              {!user ? (
+              {!user ?
                 <div className='d-flex'>
                   <div className='d-flex me-3'>
                     <Link className='user-register text-center' to='/'>
@@ -60,7 +60,7 @@ function NavBar() {
                     </Link>
                   </div>
                 </div>
-              )
+
                 :
                 <div className='profile-div d-flex '>
                   <Link className='user-profile text-center' to='/profile'>

@@ -27,7 +27,7 @@ module.exports.detail = (req, res, next) => {
 
 module.exports.order = (req, res, next) => {
     ShoppingCart.findOne({ owner: req.user.id })
-        .then(cart => {   
+        .then(cart => {
             if (!cart) {
                 next(createError(404, `Cart ${req.user.name} not found`))
             } else {

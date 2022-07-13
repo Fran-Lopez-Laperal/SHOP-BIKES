@@ -49,7 +49,7 @@ module.exports.login = (req, res, next) => {
 }
 
 module.exports.profile = (req, res, next) => {
- res.json(req.user)
+  res.json(req.user)
 }
 
 

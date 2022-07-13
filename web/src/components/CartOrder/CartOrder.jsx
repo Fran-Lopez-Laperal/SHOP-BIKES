@@ -154,20 +154,20 @@ function CartOrder() {
 
                     )}
                     <div>
-                                {loading ? (
-                                    <Loading />
-                                )
-                                    :
-                                    <button className="btn btn-danger grid mt-3 col-12"  onClick={() => handleLoading()}>
-                                        <i className="fa fa-cart-arrow-down me-5" aria-hidden="true"></i>
-                                        Realizar pedido
-                                    </button>
+                        {loading ? (
+                            <Loading />
+                        )
+                            :
+                            <button className="btn btn-danger grid mt-3 col-12" onClick={() => handleLoading()}>
+                                <i className="fa fa-cart-arrow-down me-5" aria-hidden="true"></i>
+                                Realizar pedido
+                            </button>
 
-                                }
+                        }
 
 
 
-                            </div>
+                    </div>
                     <hr />
                     <p className="fw-light"><i className="fa fa-shopping-cart me-3" aria-hidden="true"></i>
                         Mis productos

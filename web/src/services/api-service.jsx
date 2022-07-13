@@ -93,10 +93,10 @@ export function upsertCart(cart) {
   return http.put('/api/shopping-cart', cart)
 }
 
-export function addOrder(order){
+export function addOrder(order) {
   return http.post('/api/shopping-cart/order', order)
 }
 
-export function getOrder () {
+export function getOrder() {
   return http.get('/api/orders')
 }

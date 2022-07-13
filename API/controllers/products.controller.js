@@ -2,11 +2,9 @@ const Product = require('../models/product.model');
 const createError = require('http-errors')
 
 module.exports.list = (req, res, next) => {
-    console.log(req.query)
+    console.log(req.query, 'bicis aqui')
     const criterial = {}
     const { category, name, keyWords } = req.query
-
-
 
     if (category) {
         criterial.category = category
@@ -15,7 +13,7 @@ module.exports.list = (req, res, next) => {
         criterial.name = new RegExp(name, "i")
     }
     if (keyWords) {
-        criterial.keyWords = { $in: [keyWords] } 
+        criterial.keyWords = { $in: [keyWords] }
     }
 
     Product.find(criterial)
@@ -29,11 +27,6 @@ module.exports.create = (req, res, next) => {
         .then((product) => res.status(201).json(product))
         .catch(error => next(error))
 }
-
-
-
-
-
 
 
 module.exports.detail = (req, res, next) => {
